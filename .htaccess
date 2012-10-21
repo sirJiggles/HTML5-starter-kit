@@ -1,0 +1,35 @@
+RewriteEngine On
+
+# If the request is for a file that exists stop URL rewriting here
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$        -          [NC,L]
+
+# Zend Framework 
+RewriteRule ^.*$        index.php  [NC,L]
+
+# Enable mod_expires module
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    <files ~ "\.(css|js)$">
+        ExpiresDefault "access plus 1 year"
+    </files>
+
+
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+
+    # Set expire date to 1 week for HTML
+    ExpiresByType text/html "access plus 1 week"
+    ExpiresByType application/xhtml+xml "access plus 1 week"
+
+</IfModule>
+
+
+# Compression
+<ifmodule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
