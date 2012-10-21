@@ -1,0 +1,80 @@
+/* 
+    Document   : grid
+    Author     : Gareth Fuller
+    Description:
+        This is the grid stylesheet
+*/
+
+
+#website{
+    margin:0 auto;
+    max-width: 960px;
+    width:90%;
+    padding:0 5% 0 5%;
+}
+
+
+.col{
+    display:block;
+    float:left;
+    margin:0 2% 0 0;
+}
+
+.end{
+    margin:0;
+}
+
+.row{
+    margin:0 0 20px 0;
+    float:left;
+    width:100%;
+}
+
+.one{
+    width:6.5%;
+}
+
+.two{
+    width:15%;
+}
+
+.three{
+    width:23.5%;
+}
+
+.four{
+    width:32%;
+}
+
+.five{
+    width:40.5%;
+}
+
+.six{
+    width:49%;
+}
+
+.seven{
+    width:57.5%;
+}
+
+.eight{
+    width:66%;
+}
+
+.nine{
+    width:74.5%;
+}
+
+.ten{
+    width:83%;
+}
+
+.eleven{
+    width:91.5%;
+}
+
+.twelve{
+    width:100%;
+    margin:0;
+}

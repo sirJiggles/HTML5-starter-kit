@@ -1,0 +1,57 @@
+/* 
+    Document   : responsive
+    Created on : Oct 19, 2012, 10:07:18 AM
+    Author     : Gareth Fuller
+    Description:
+        This contains all of the media queries
+*/
+
+/*======== TABLET =======*/
+
+@media only screen and (max-width: 870px) and (min-width: 500px) {
+    
+}
+
+/*======= MOBILE =====*/
+@media only screen and (max-width: 499px) {
+    form label{
+        display:none;
+    }
+    
+    form input{
+        width:90%;
+    }
+    
+    meter,progress{
+        width:90%;
+    }
+    
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven,
+    .eight,
+    .nine,
+    .ten,
+    .eleven{
+        width:100%;
+        margin:0 0 2% 0;
+    }
+    
+    #main-nav{
+        width:100%;
+        margin:10px 0 0 0;
+    }
+    #main-nav ul li{
+        width:100%;
+        margin:0 0 1px 0;
+    }
+    #main-nav ul li a{
+        text-align: center;
+        width:100%;
+        padding:10px 0 10px 0;
+    }
+   
+    
+}

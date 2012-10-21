@@ -1,0 +1,12 @@
+/* 
+    Document   : css3
+    Author     : Gareth Fuller
+    Description:
+        Contains all of the css3 enhancements
+*/
+
+form input{
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}

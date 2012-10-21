@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+	<title>Gareth Fuller | HTML5 Base</title>
+        
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+	
+	<!-- META -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+        <meta name="keywords" content="" />
+	
+        <!-- Humans file -->
+	<link rel="author" type="text/plain" href="/humans.txt" />
+
+	<!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/favicons/16.ico" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/144.png" />
+        
+	<!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/reset.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/grid.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/typography.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/forms.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/css3.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css"/>
+        
+        <!-- Syntax highlighter -->
+        <link rel="stylesheet" href="/librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
+        
+    </head>
+    <body>
+        
+        <div id="website">
+            
+            <div class="row">
+                <header id="header" class="col twelve">
+
+                    <!-- Main navigation -->
+                    <nav id="main-nav">
+                        <ul>
+                            <li><a href="/index.html" title="index">Forms</a></li>
+                            <li><a href="/tags.html" title="tags" class="active">Tags</a></li>
+                            <li><a href="/" title="offline">Offline</a></li>
+                        </ul>
+                    </nav>
+
+
+                    <h1>Gareth Fuller - HTML5 Base</h1>
+
+                </header>
+            </div>
+
+            <!-- Main content -->
+            <div id="main" role="main">
+
+
+                <!-- swapper div (ajax content) default to forms -->
+                <section id="content" class="col nine">
+                    
+                    <h2>New Tags in HTML 5</h2>
+                    
+                    <div class="row">
+                        <h3>Article</h3>
+                        <p>Should be stand alone and portable to any page. Examples of use:</p>
+                        <ul>
+                            <li>Posts</li>
+                            <li>News article</li>
+                            <li>Forum comments</li>
+                        </ul>
+                        
+                        <pre class="brush: js">
+                           
+                            <article>
+                                <h4>This is the article title</h4>
+                                <p>These are the article details</p>
+                            </article>
+                           
+                        </pre>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <h3>Aside</h3>
+                        <p>Content "to the side" of some other related content.</p>
+                        <pre class="brush: js">
+                            <div id="main" role="main">
+                                <h2>Boats</h2>
+                                <p>Boats are just great!</p>
+                            </div>
+                            <aside>
+                                <ul>
+                                    <li>Get boats now!</li>
+                                    <li>We love boats</li>
+                                    <li>Have you seen a boat?</li>
+                                </ul>
+                            </aside>
+                        </pre>
+                        
+                    </div>
+                    
+                    <div class="row">
+                        <h3>Audio</h3>
+                        <p>The audio tag enables you to embed audio into the page.</p>
+                        <pre class="brush: js">
+                            <audio controls="controls">
+                                <source src="gareth.ogg" type="audio/ogg">
+                                <source src="gareth.mp3" type="audio/mp3">
+                                Your browser does not support the new audio tag.
+                            </audio>
+                        </pre>
+                        <p>The audio tag comes with some options, like in the example with controls switched on. The full list is</p>
+                        <ul>
+                            <li>autoplay</li>
+                            <li>controls</li>
+                            <li>loop</li>
+                            <li>preload</li>
+                            <li>source</li>
+                        </ul>
+                    </div>
+                    
+                    
+                </section>
+                
+                <aside class="col three end">
+                    <ul>
+                        <li><a href='#' title="one">One</a></li>
+                        <li><a href='#' title="two">Two</a></li>
+                        <li><a href='#' title="three">Three</a></li>
+                        
+                    </ul>
+                    
+                </aside>
+                
+                
+            </div>
+
+            <footer>
+
+            </footer>
+            
+            
+        </div>
+        
+        <!-- Load all JS last -->
+        <script type="text/javascript" src="/assets/js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="/librarys/syntax-highlighter/shCore.js"></script>
+        <script type="text/javascript" src="/librarys/syntax-highlighter/shBrushJScript.js"></script>
+        <script type="text/javascript" src="/assets/js/script.js"></script>
+        
+    </body>
+</html>

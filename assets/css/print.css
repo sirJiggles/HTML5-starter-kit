@@ -1,0 +1,11 @@
+/* 
+    Document   : print
+    Author     : Gareth Fuller
+    Description:
+        This is the print stylesheet
+*/
+
+root { 
+    display: block;
+}
+

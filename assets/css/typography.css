@@ -1,0 +1,29 @@
+/* 
+    Document   : typography
+    Author     : Gareth Fuller
+    Description:
+        Typography settings in here
+*/
+
+body{
+    /* base font size */
+    font-size:14px;
+    font-family:Arial, Helvetica,sans-serif;
+    color:#666;
+}
+
+h1{
+    font-size: 1.857em;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 1.571em;
+    font-weight: 600;
+}
+
+h3{
+    font-size:1.286em;
+    font-weight: 600;
+}
+
