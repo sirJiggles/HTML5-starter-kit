@@ -1,80 +1,103 @@
-/* 
-    Document   : grid
-    Author     : Gareth Fuller
-    Description:
-        This is the grid stylesheet
-*/
+/* Styles for the Grid */
+#website {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 90%;
+  padding: 0 5% 0 5%; }
 
+.col {
+  display: block;
+  float: left;
+  margin: 0 2% 0 0; }
 
-#website{
-    margin:0 auto;
-    max-width: 960px;
-    width:90%;
-    padding:0 5% 0 5%;
-}
+.end {
+  margin: 0; }
 
+.row {
+  margin: 0 0 20px 0;
+  float: left;
+  width: 100%; }
 
-.col{
-    display:block;
-    float:left;
-    margin:0 2% 0 0;
-}
+.grid-1 {
+  width: 78.1383; }
 
-.end{
-    margin:0;
-}
+.grid-1-end {
+  width: 77.92553;
+  margin: 0; }
 
-.row{
-    margin:0 0 20px 0;
-    float:left;
-    width:100%;
-}
+.grid-2 {
+  width: 156.48936; }
 
-.one{
-    width:6.5%;
-}
+.grid-2-end {
+  width: 156.2766;
+  margin: 0; }
 
-.two{
-    width:15%;
-}
+.grid-3 {
+  width: 234.84043; }
 
-.three{
-    width:23.5%;
-}
+.grid-3-end {
+  width: 234.62766;
+  margin: 0; }
 
-.four{
-    width:32%;
-}
+.grid-4 {
+  width: 313.19149; }
 
-.five{
-    width:40.5%;
-}
+.grid-4-end {
+  width: 312.97872;
+  margin: 0; }
 
-.six{
-    width:49%;
-}
+.grid-5 {
+  width: 391.54255; }
 
-.seven{
-    width:57.5%;
-}
+.grid-5-end {
+  width: 391.32979;
+  margin: 0; }
 
-.eight{
-    width:66%;
-}
+.grid-6 {
+  width: 469.89362; }
 
-.nine{
-    width:74.5%;
-}
+.grid-6-end {
+  width: 469.68085;
+  margin: 0; }
 
-.ten{
-    width:83%;
-}
+.grid-7 {
+  width: 548.24468; }
 
-.eleven{
-    width:91.5%;
-}
+.grid-7-end {
+  width: 548.03191;
+  margin: 0; }
 
-.twelve{
-    width:100%;
-    margin:0;
-}
+.grid-8 {
+  width: 626.59574; }
+
+.grid-8-end {
+  width: 626.38298;
+  margin: 0; }
+
+.grid-9 {
+  width: 704.94681; }
+
+.grid-9-end {
+  width: 704.73404;
+  margin: 0; }
+
+.grid-10 {
+  width: 783.29787; }
+
+.grid-10-end {
+  width: 783.08511;
+  margin: 0; }
+
+.grid-11 {
+  width: 861.64894; }
+
+.grid-11-end {
+  width: 861.43617;
+  margin: 0; }
+
+.grid-12 {
+  width: 939.78723; }
+
+.grid-12-end {
+  width: 939.57447;
+  margin: 0; }

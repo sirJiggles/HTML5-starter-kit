@@ -1,66 +1,38 @@
-/* 
-    Document   : forms
-    Author     : Gareth Fuller
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
+/* Form styles */
 /* CSS validation overrides */
-:required { }
-:optional { }
-:valid { }
-:invalid { }
-:default { }
-:in-range { }
-:out-of-range { }
-
-form{
-    
-}
-
-form fieldset{
-    float:left;
-    width:100%;
-}
-
-form label{
-    width:40%;
-    margin:2% 2% 1% 0;
-    float:left;
-}
-
-form legend{
-    margin:10px 0 10px 0;
-    font-weight: 600;
-    float:left;
-    width:96%;
-    background-color:#8fd8ed;
-    padding:2%;
-    color:#fff;
-}
-
-form input{
-    width: 50%;
-    margin:2% 0 1% 0;
-    padding:5px;
-    border:2px solid #ccc;
-}
-
-form input[type='submit']{
-    background-color:#8fd8ed;
-    width:auto;
-    border:none;
-    color:#fff;
-    text-transform: uppercase;
-    padding:10px;
-    float:right;
-}
+form fieldset {
+  float: left;
+  width: 100%; }
+form label {
+  width: 40%;
+  margin: 2% 2% 1% 0;
+  float: left; }
+form legend {
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  float: left;
+  width: 96%;
+  background-color: #8fd8ed;
+  padding: 2%;
+  color: white; }
+form input {
+  width: 50%;
+  margin: 2% 0 1% 0;
+  padding: 5px;
+  border: 2px solid #cccccc; }
+form input[type='submit'] {
+  background-color: #8fd8ed;
+  width: auto;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  float: right; }
 
 /* New input types */
 progress,
-meter{
-    width: 50%;
-    margin:2% 0 1% 0;
-    display:block;
-    float:left;
-}
+meter {
+  width: 50%;
+  margin: 2% 0 1% 0;
+  display: block;
+  float: left; }

@@ -1,0 +1,35 @@
+/* Styles for the Grid */
+
+@import '_mixins.sass'
+@import '_global-vars.sass'
+
+#website
+    margin: 0 auto
+    max-width: 960px
+    width: 90%
+    padding: 0 5% 0 5%
+
+.col
+    display: block
+    float: left
+    margin: 0 2% 0 0
+
+.end
+    margin: 0
+
+.row
+    margin: 0 0 20px 0
+    float: left
+    width: 100%
+
+
+// Generate grid
+@for $i from 1 through $cols
+    $new-width: (($col-width + $gutter-width) * $i) - $gutter-width
+    @if $i == 12
+        $new-width: ($new-width - $gutter-width)
+    .grid-#{$i}
+        width: $new-width
+    .grid-#{$i}-end
+        width: ($new-width - $gutter-width)
+        margin: 0
