@@ -1,0 +1,16 @@
+/* Responsive styles */
+
+@import "_mixins.scss";
+@import "_global-vars.scss";
+
+/* DESKTOP - LARGE */
+@media only screen and (min-width: $large-screen) {}
+
+/* TABLET PORTRAIT TO DESKTOP */
+@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {}
+
+/* MOBILE LANDSCAPE TO TABLET PORTRAIT */
+@media only screen and (max-width: $tablet) {}
+
+/* MOBILE LANDSCAPE AND DOWN */
+@media only screen and (max-width: $mobile) {}

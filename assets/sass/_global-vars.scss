@@ -1,0 +1,15 @@
+$large-screen: 92.3076em;
+$desktop-min: 59.07686em;
+$desktop-max: 75.30762em;
+$tablet: 58.99994em;
+$mobile: 36.92304em;
+
+$site-width: 940;
+$basefont: 16px;
+$cols: 12;
+
+$gutter-width: ((($site-width / $cols) / 3) / $site-width) * 100%;
+$total-gutter: (($site-width / $cols) / 3) * ($cols - 1);
+$remaining-page: $site-width - $total-gutter;
+$col-width: (($remaining-page / $cols) / $site-width) * 100%;
+

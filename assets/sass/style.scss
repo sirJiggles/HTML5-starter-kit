@@ -1,0 +1,84 @@
+/* Main stylesheet */
+
+@import "_mixins.scss";
+@import "_global-vars.scss";
+
+$blue: #8fd8d8;
+$red: #856363;
+$green: #8ba870;
+
+.blue {
+  background-color: $blue;
+}
+
+.red {
+  background-color: $red;
+}
+
+.green {
+  background-color: $green;
+}
+
+/* ======== Headings ======= */
+h2,h3 {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+h2 {
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  margin: 0 0 15px 0;
+}
+
+/* ===== Global common elements ======= */
+
+p {
+  margin: 0 0 15px 0;
+}
+
+ul {
+  list-style-type: disc;
+  padding: 0 0 0 30px;
+  margin: 0 0 15px 0;
+  li {
+    margin: 0 0 10px 0;
+  }
+}
+
+/* ======== Header ======== */
+
+#header {
+  padding: 2%;
+  background-color: #efefef;
+  width: 96%;
+  h1 {
+    float: left;
+    display: inline-block;
+    margin-top: 7px;
+  }
+  #main-nav {
+    float: right;
+    ul li {
+      display: block;
+      float: left;
+      margin: 0 1px 0 0;
+    }
+    a {
+      color: #666666;
+      padding: 15px;
+      display: block;
+      float: left;
+      outline: none;
+      text-decoration: none;
+      background-color: white;
+    }
+    a.active {
+      background-color: #8fd8ed;
+      color: white;
+    }
+  }
+}

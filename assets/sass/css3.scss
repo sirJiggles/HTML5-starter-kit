@@ -1,0 +1,8 @@
+/* CSS3 enhancements */
+
+@import "_mixins.scss";
+@import "_global-vars.scss";
+
+form input {
+  @include rounded(4px);
+}

@@ -1,0 +1,35 @@
+/* Styles for the Grid */
+
+@import "_mixins.scss";
+@import "_global-vars.scss";
+
+#website {
+  margin: 0 auto;
+  max-width: $site-width+px;
+  width: 90%;
+  padding: 0 5% 0 5%;
+}
+
+.col {
+  display: block;
+  float: left;
+  margin: 0 $gutter-width 0 0;
+}
+
+.end {
+  margin: 0;
+}
+
+.row {
+  margin: 0 0 20px 0;
+  float: left;
+  width: 100%;
+}
+
+// Generate grid
+@for $i from 1 through $cols {
+  $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
+  .grid-#{$i} {
+    width: $new-width;
+  }
+}
