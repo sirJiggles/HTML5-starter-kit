@@ -8,7 +8,7 @@
 .col {
   display: block;
   float: left;
-  margin: 0 2.77778% 0 0; }
+  margin: 0 26px 0 0; }
 
 .end {
   margin: 0; }
@@ -19,37 +19,37 @@
   width: 100%; }
 
 .grid-1 {
-  width: 5.78704%; }
+  width: 54px; }
 
 .grid-2 {
-  width: 14.35185%; }
+  width: 134px; }
 
 .grid-3 {
-  width: 22.91667%; }
+  width: 215px; }
 
 .grid-4 {
-  width: 31.48148%; }
+  width: 295px; }
 
 .grid-5 {
-  width: 40.0463%; }
+  width: 376px; }
 
 .grid-6 {
-  width: 48.61111%; }
+  width: 456px; }
 
 .grid-7 {
-  width: 57.17593%; }
+  width: 537px; }
 
 .grid-8 {
-  width: 65.74074%; }
+  width: 617px; }
 
 .grid-9 {
-  width: 74.30556%; }
+  width: 698px; }
 
 .grid-10 {
-  width: 82.87037%; }
+  width: 778px; }
 
 .grid-11 {
-  width: 91.43519%; }
+  width: 859px; }
 
 .grid-12 {
-  width: 100.0%; }
+  width: 940px; }
