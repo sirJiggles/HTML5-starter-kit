@@ -1,0 +1,260 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Styles for the Grid */
+#website {
+  margin: 0 auto;
+  max-width: 940px;
+  width: 90%;
+  padding: 0 5% 0 5%; }
+
+.col {
+  display: block;
+  float: left;
+  margin: 0 2.77778% 0 0; }
+
+.end {
+  margin: 0; }
+
+.row {
+  margin: 0 0 20px 0;
+  float: left;
+  width: 100%; }
+
+.grid-1 {
+  width: 5.78704%; }
+
+.grid-2 {
+  width: 14.35185%; }
+
+.grid-3 {
+  width: 22.91667%; }
+
+.grid-4 {
+  width: 31.48148%; }
+
+.grid-5 {
+  width: 40.0463%; }
+
+.grid-6 {
+  width: 48.61111%; }
+
+.grid-7 {
+  width: 57.17593%; }
+
+.grid-8 {
+  width: 65.74074%; }
+
+.grid-9 {
+  width: 74.30556%; }
+
+.grid-10 {
+  width: 82.87037%; }
+
+.grid-11 {
+  width: 91.43519%; }
+
+.grid-12 {
+  width: 100.0%; }
+
+/* Typography style sheet */
+body {
+  /* base font size */
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666; }
+
+/* ======== Headings ======= */
+h1 {
+  font-size: 1.857em;
+  font-weight: 600; }
+
+h2 {
+  font-size: 1.571em;
+  font-weight: 600;
+  margin: 0 0 20px 0; }
+
+h3 {
+  font-size: 1.286em;
+  font-weight: 600;
+  margin: 0 0 15px 0; }
+
+h2, h3 {
+  display: block;
+  float: left;
+  width: 100%; }
+
+/* ===== Global common elements ======= */
+p {
+  margin: 0 0 15px 0; }
+
+ul {
+  list-style-type: disc;
+  padding: 0 0 0 30px;
+  margin: 0 0 15px 0; }
+
+li {
+  margin: 0 0 10px 0; }
+
+/* Form styles */
+/* CSS validation overrides */
+form fieldset {
+  float: left;
+  width: 100%; }
+
+form label {
+  width: 40%;
+  margin: 2% 2% 1% 0;
+  float: left; }
+
+form legend {
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  float: left;
+  width: 96%;
+  background-color: #8fd8ed;
+  padding: 2%;
+  color: white; }
+
+form input {
+  width: 50%;
+  margin: 2% 0 1% 0;
+  padding: 5px;
+  border: 2px solid #cccccc; }
+
+form input[type='submit'] {
+  background-color: #8fd8ed;
+  width: auto;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  float: right; }
+
+/* New input types */
+progress,
+meter {
+  width: 50%;
+  margin: 2% 0 1% 0;
+  display: block;
+  float: left; }
+
+/* ======== Header ======== */
+#header {
+  padding: 2%;
+  background-color: #efefef;
+  width: 96%; }
+
+h1 {
+  float: left;
+  display: inline-block;
+  margin-top: 7px; }
+
+#main-nav {
+  float: right; }
+
+#main-nav ul li {
+  display: block;
+  float: left;
+  margin: 0 1px 0 0; }
+
+#main-nav ul li a {
+  color: #666666;
+  padding: 15px;
+  display: block;
+  float: left;
+  outline: none;
+  text-decoration: none;
+  background-color: white; }
+
+#main-nav ul li a.active {
+  background-color: #8fd8ed;
+  color: white; }
+
+/* Main stylesheet */
+.blue {
+  background-color: #8fd8d8; }
+
+.red {
+  background-color: #856363; }
+
+.green {
+  background-color: #8ba870; }
+
+/* Responsive styles */
+/* DESKTOP - LARGE */
+/* TABLET PORTRAIT TO DESKTOP */
+/* MOBILE LANDSCAPE TO TABLET PORTRAIT */
+/* MOBILE LANDSCAPE AND DOWN */
+@media only screen and (max-width: 36.92304em) {
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-7,
+  .grid-8,
+  .grid-9,
+  .grid-10,
+  .grid-11 {
+    width: 100%; }
+
+  #main-nav {
+    width: 100%;
+    margin: 10px 0 0 0; }
+
+  #main-nav ul {
+    padding: 0;
+    margin: 0; }
+
+  #main-nav ul li {
+    width: 100%;
+    margin: 0 0 1px 0; }
+
+  #main-nav ul li a {
+    width: 96%;
+    padding: 15px 2% 15px 2%; } }

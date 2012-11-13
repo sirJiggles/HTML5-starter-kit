@@ -1,0 +1,38 @@
+@import "_mixins.scss";
+@import "_global-vars.scss";
+
+/* ======== Header ======== */
+
+#header {
+    padding: 2%;
+    background-color: #efefef;
+    width: 96%;
+}
+h1 {
+    float: left;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+#main-nav {
+    float: right;
+}
+#main-nav ul li {
+    display: block;
+    float: left;
+    margin: 0 1px 0 0;
+}
+#main-nav ul li a {
+    color: $grey;
+    padding: 15px;
+    display: block;
+    float: left;
+    outline: none;
+    text-decoration: none;
+    background-color: white;
+}
+
+#main-nav ul li a.active {
+    background-color: $light-grey;
+    color: white;
+}
