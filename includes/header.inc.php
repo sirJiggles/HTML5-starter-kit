@@ -37,13 +37,7 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/144.png" />
         
 	<!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/reset.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/grid.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/typography.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/forms.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/style.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/css3.css" media="screen" type="text/css" />
-        <link rel="stylesheet" href="/assets/css/responsive.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="/assets/css/combined.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css"/>
         
         <!--[if lte IE 7]>

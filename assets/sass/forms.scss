@@ -19,16 +19,20 @@
 :out-of-range {}
 
 form {
-  fieldset {
+
+}
+form fieldset {
     float: left;
     width: 100%;
-  }
-  label {
+}
+
+form label {
     width: 40%;
     margin: 2% 2% 1% 0;
     float: left;
-  }
-  legend {
+}
+
+form legend {
     margin: 10px 0 10px 0;
     font-weight: 600;
     float: left;
@@ -36,14 +40,16 @@ form {
     background-color: #8fd8ed;
     padding: 2%;
     color: white;
-  }
-  input {
+}
+
+form input {
     width: 50%;
     margin: 2% 0 1% 0;
     padding: 5px;
     border: 2px solid #cccccc;
-  }
-  input[type='submit'] {
+}
+
+form input[type='submit'] {
     background-color: #8fd8ed;
     width: auto;
     border: none;
@@ -51,9 +57,7 @@ form {
     text-transform: uppercase;
     padding: 10px;
     float: right;
-  }
 }
-
 /* New input types */
 progress,
 meter {

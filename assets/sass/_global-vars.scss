@@ -5,7 +5,7 @@ $tablet: 58.99994em;
 $mobile: 36.92304em;
 
 $site-width: 940;
-$basefont: 16px;
+$base-font: 16px;
 $cols: 12;
 
 $gutter-width: ((($site-width / $cols) / 3) / $site-width) * 100%;
@@ -15,3 +15,8 @@ $remaining-page: $site-width - $total-gutter;
 $col-width: (($remaining-page / $cols) / $site-width) * 100%;
 $col-width-abs: ($remaining-page / $cols);
 
+$blue: #8fd8d8;
+$red: #856363;
+$green: #8ba870;
+$grey: #666;
+$light-grey: #8fd8ed;
