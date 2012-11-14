@@ -42,9 +42,9 @@
         
         <!--[if lte IE 7]>
             <link rel="stylesheet" href="assets/css/grid-fixed.css" media="screen" type="text/css"/>
+            <link rel="stylesheet" href="assets/css/fontello-ie7.css">
         <![endif]-->
-        
-        
+
         <!-- Syntax highlighter -->
         <link rel="stylesheet" href="librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
         
@@ -62,9 +62,10 @@
                 <!-- Main navigation -->
                 <nav id="main-nav">
                     <ul>
-                        <li><a href="index.php" class="active" title="index">Forms</a></li>
-                        <li><a href="tags.php" title="tags">Tags</a></li>
-                        <li><a href="grid.php" title="grid">Grid</a></li>
+                        <li class="first"><a href="index.php" class="active" title="index"><span data-icon="&#128240;"></span>Forms</a></li>
+                        <li><a href="tags.php" title="tags"><span data-icon="&#59148;"></span>Tags</a></li>
+                        <li><a href="grid.php" title="grid"><span data-icon="&#9871;"></span>Grid</a></li>
+                        <li><a href="grid.php" title="grid"><span data-icon="&#128247;"></span>Gallery</a></li>
                     </ul>
                 </nav>
             </div>
