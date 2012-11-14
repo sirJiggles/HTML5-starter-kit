@@ -3,7 +3,7 @@
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
-#website {
+.center-content {
   margin: 0 auto;
   max-width: $site-width+px;
   width: 90%;

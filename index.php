@@ -3,7 +3,7 @@
 <!-- Main content -->
 <div id="main" role="main">
 
-    <section id="content" class="col grid-9">
+    <section id="content" class="col grid-12 end">
 
         <h2>Forms in HTML5</h2>
 
@@ -52,9 +52,6 @@
         </form>
 
     </section>
-
-    <?php include('includes/aside.inc.php'); ?>
-
 
 </div>
 

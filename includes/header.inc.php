@@ -48,27 +48,26 @@
         <!-- Syntax highlighter -->
         <link rel="stylesheet" href="/librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
         
+        <!-- Google font -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+        
     </head>
     <body>
-        
-        <div id="website">
-            
-            <div class="row">
-                <header id="header" class="col grid-12 end">
-                    
-                    <h1>Gareth Fuller - HTML5 Base</h1>
 
-                    <!-- Main navigation -->
-                    <nav id="main-nav">
-                        <ul>
-                            <li><a href="/index.php" class="active" title="index">Forms</a></li>
-                            <li><a href="/tags.php" title="tags">Tags</a></li>
-                            <li><a href="/grid.php" title="grid">Grid</a></li>
-                        </ul>
-                    </nav>
+       
+        <header id="header" class="col grid-12 end">
+            <div class="center-content">
+                <h1>Gareth Fuller - HTML5 Base</h1>
 
-
-                    
-
-                </header>
+                <!-- Main navigation -->
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="/index.php" class="active" title="index">Forms</a></li>
+                        <li><a href="/tags.php" title="tags">Tags</a></li>
+                        <li><a href="/grid.php" title="grid">Grid</a></li>
+                    </ul>
+                </nav>
             </div>
+        </header>
+        
+        <div class="center-content">

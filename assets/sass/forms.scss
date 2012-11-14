@@ -28,41 +28,48 @@ form fieldset {
 
 form label {
     width: 40%;
-    margin: 2% 2% 1% 0;
     float: left;
+    padding: 0 0 2% 0;
+    line-height: 1.8em;
 }
 
 form legend {
-    margin: 10px 0 10px 0;
-    font-weight: 600;
+    margin: 0 0 10px 0;
+    font-weight: 400;
     float: left;
     width: 96%;
-    background-color: #8fd8ed;
-    padding: 2%;
+    background-color: $secondary-color;
+    padding: 10px 2% 10px 2%;
     color: white;
 }
 
 form input {
-    width: 50%;
-    margin: 2% 0 1% 0;
-    padding: 5px;
-    border: 2px solid #cccccc;
+    width: 57%;
+    margin: 0 0 2% 0;
+    padding: 7px;
+    border: 2px solid lighten($base-color, 70%);
 }
 
-form input[type='submit'] {
-    background-color: #8fd8ed;
+form input[type='submit']{
+    background-color: $secondary-color;
+    border:1px solid $secondary-color;
     width: auto;
-    border: none;
     color: white;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 10px 15px 10px 15px;
     float: right;
 }
+
+form input[type='submit']:hover,
+form input[type='submit']:active{
+    border:1px solid lighten($secondary-color, 10%);
+} 
+
 /* New input types */
 progress,
 meter {
-  width: 50%;
-  margin: 2% 0 1% 0;
+  width: 59%;
+  margin: 0 0 4% 0;
   display: block;
   float: left;
 }

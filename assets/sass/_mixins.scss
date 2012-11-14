@@ -1,5 +1,32 @@
 @mixin rounded($radius: 5px) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin em-font($px:12){
+    font-size:(1 / $base-font) * $px + em;
+}
+
+@mixin drop-shadow($left-offset:0, $top-offset:5px, $blur:5px, $height:0, $color:#222){
+    -moz-box-shadow: $left-offset $top-offset $blur $height $color;
+    -webkit-box-shadow: $left-offset $top-offset $blur $height $color;
+    box-shadow: $left-offset $top-offset $blur $height $color;
+    
+}
+
+@mixin text-shadow($horizontal:1px, $vertical:1px, $blur:1px, $color:#222){
+    text-shadow: $horizontal $vertical $blur $color;
+    filter: dropshadow(color=$color, offx=1, offy=1);
+}
+
+
+@mixin bg-gradient($from:#222, $to:#fff){
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+    background: -o-linear-gradient(top, $from 0%,$to 100%);
+    background: -ms-linear-gradient(top, $from 0%,$to 100%);
+    background: linear-gradient(to bottom, $from 0%,$to 100%); 
+    
 }

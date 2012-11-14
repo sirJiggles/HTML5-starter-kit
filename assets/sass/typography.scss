@@ -5,36 +5,40 @@
 
 body {
     /* base font size */
-    font-size:$base-font;
-    font-family: Arial, Helvetica, sans-serif;
-    color: $grey;
+    font-size:$base-font+'px';
+    color: lighten($base-color, 20%);
+    font-family: 'Raleway', sans-serif;
 }
 
 /* ======== Headings ======= */
 
 h1 {
-    font-size: 1.857em;
-    font-weight: 600;
+    @include em-font(26);
+    font-weight: 400;
+    color:$off-white;
 }
 
 h2 {
-    font-size: 1.571em;
-    font-weight: 600;
+    @include em-font(18);
+    font-weight: 700;
     margin: 0 0 20px 0;
+    display: block;
+    float: left;
+    width: 100%;
 }
 
 h3 {
-    font-size: 1.286em;
-    font-weight: 600;
+    @include em-font(16);
+    font-weight: 400;
     margin: 0 0 15px 0;
+    background-color: lighten($secondary-color, 10%);
+    color:$off-white;
+    padding:10px 2% 10px 2%;
+    width:96%;
+    display:block;
+    float:left;
 }
 
-
-h2,h3 {
-  display: block;
-  float: left;
-  width: 100%;
-}
 
 
 /* ===== Global common elements ======= */

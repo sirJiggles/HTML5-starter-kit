@@ -3,7 +3,7 @@
 <!-- Main content -->
 <div id="main" role="main">
 
-    <section id="content" class="col grid-9">
+    <section id="content" class="col grid-12 end">
         
         <h2>New Tags (worth using) in HTML 5</h2>
                     
@@ -83,8 +83,6 @@
         
     </section>
     
-    <?php include('includes/aside.inc.php'); ?>
-
 </div>
 
 <?php include('includes/footer.inc.php');?>

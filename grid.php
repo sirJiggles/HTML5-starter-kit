@@ -10,7 +10,7 @@
 <!-- Main content -->
 <div id="main" role="main">
 
-    <section id="content" class="col grid-9">
+    <section id="content" class="col grid-12 end">
 
         <div class="row">
             <div class="col grid-1 blue">
@@ -152,8 +152,6 @@
         </div>
 
     </section>
-    
-    <?php include('includes/aside.inc.php'); ?>
 
 </div>
 

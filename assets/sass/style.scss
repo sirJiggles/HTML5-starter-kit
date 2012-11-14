@@ -3,14 +3,13 @@
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
-.blue{
-  background-color: $blue;
+body{
+    background-color:white;
 }
 
-.red{
-  background-color: $red;
-}
-
-.green{
-  background-color: $green;
+#main{
+    padding:85px 0 0 0;
+    display:block;
+    float:left;
+    width:100%;
 }
