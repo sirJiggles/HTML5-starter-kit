@@ -30,23 +30,23 @@
 	<link rel="author" type="text/plain" href="/humans.txt" />
 
 	<!-- Favicons -->
-        <link rel="shortcut icon" href="/assets/favicons/16.ico" />
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/144.png" />
+        <link rel="shortcut icon" href="assets/favicons/16.ico" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/144.png" />
         
 	<!-- CSS -->
-        <link rel="stylesheet" href="/assets/css/combined.css" media="screen" type="text/css" />
-	<link rel="stylesheet" href="/assets/css/print.css" media="print" type="text/css"/>
+        <link rel="stylesheet" href="assets/css/combined.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="assets/css/print.css" media="print" type="text/css"/>
         
         <!--[if lte IE 7]>
-            <link rel="stylesheet" href="/assets/css/grid-fixed.css" media="screen" type="text/css"/>
+            <link rel="stylesheet" href="assets/css/grid-fixed.css" media="screen" type="text/css"/>
         <![endif]-->
         
         
         <!-- Syntax highlighter -->
-        <link rel="stylesheet" href="/librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
+        <link rel="stylesheet" href="librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
         
         <!-- Google font -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
@@ -62,9 +62,9 @@
                 <!-- Main navigation -->
                 <nav id="main-nav">
                     <ul>
-                        <li><a href="/index.php" class="active" title="index">Forms</a></li>
-                        <li><a href="/tags.php" title="tags">Tags</a></li>
-                        <li><a href="/grid.php" title="grid">Grid</a></li>
+                        <li><a href="index.php" class="active" title="index">Forms</a></li>
+                        <li><a href="tags.php" title="tags">Tags</a></li>
+                        <li><a href="grid.php" title="grid">Grid</a></li>
                     </ul>
                 </nav>
             </div>
