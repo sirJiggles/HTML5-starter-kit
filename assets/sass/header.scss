@@ -9,6 +9,7 @@
     width: 96%;
     @include bg-gradient(lighten($base-color, 10%), $base-color);
     @include drop-shadow(0, 0, 13px, 3px);
+    border-bottom:3px solid $secondary-color;
     position:fixed;
     z-index:2;
 }
@@ -22,11 +23,12 @@ h1 {
     display:block;
     float:right;
     margin:0;
+    width:306px;
 }
 #main-nav ul li {
     display: block;
     float: left;
-    margin: 0 5px 0 0;
+    margin: 0 1% 0 0;
     border-right:1px solid #444;
     width:72px;
     height:100%;

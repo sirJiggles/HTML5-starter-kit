@@ -30,13 +30,7 @@ h2 {
 h3 {
     @include em-font(16);
     font-weight: 400;
-    margin: 0 0 15px 0;
-    background-color: lighten($secondary-color, 10%);
-    color:$off-white;
-    padding:10px 2% 10px 2%;
-    width:96%;
-    display:block;
-    float:left;
+    margin:0;
 }
 
 

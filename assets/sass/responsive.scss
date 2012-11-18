@@ -4,13 +4,46 @@
 @import "_global-vars.scss";
 
 /* DESKTOP - LARGE */
-@media only screen and (min-width: $large-screen) {}
+@media only screen and (min-width: $large-screen) {
+    
+}
 
 /* TABLET PORTRAIT TO DESKTOP */
-@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {}
+@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+    #main-nav{
+         
+    }
+}
 
 /* MOBILE LANDSCAPE TO TABLET PORTRAIT */
-@media only screen and (max-width: $tablet) {}
+@media only screen and (max-width: $tablet) {
+    
+    #main-nav{
+        display:block;
+        float:left;
+        width:100%;
+    }
+    
+    #main-nav ul{
+        padding:0;
+        float:left;
+        width:100%;
+    }
+    
+    #main-nav ul li{
+        width:23%;
+    }
+    
+    h1{
+        display:none;
+    }
+    
+    #gallery-container{
+        
+        width:100%;
+    }
+    
+}
 
 /* MOBILE LANDSCAPE AND DOWN */
 @media only screen and (max-width: $mobile) {
@@ -25,7 +58,7 @@
         width:100%;
     }
     
-    #main-nav{
+    /*#main-nav{
         width:100%;
         margin:10px 0 0 0;
     }
@@ -40,6 +73,6 @@
     #main-nav ul li a{
         width:96%;
         padding:15px 2% 15px 2%;
-    }  
+    } */ 
     
 }

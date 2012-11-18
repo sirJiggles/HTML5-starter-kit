@@ -1,11 +1,11 @@
 /* TEAM */
-<your title>: <your name>
-Site: 
-Twitter: 
-Location: 
+Web Developer: Gareth Fuller
+Site: Starter Kit
+Twitter: sirJiggles
+Location: Cambridge UK
 
 /* CREDITS */
-Names (& URL): 
+Daniel Bruce & Andreas Blombäck - Entypo font stack (http://www.entypo.com/)
 
 /* SITE */
 Standards: 
@@ -13,7 +13,5 @@ Standards:
 - CSS3
 
 Components: 
-
 - jQuery http://jquery.com/
-
-CMS:
+- Entypo font stack (icon based font)

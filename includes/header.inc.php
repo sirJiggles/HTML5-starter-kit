@@ -53,22 +53,3 @@
         
     </head>
     <body>
-
-       
-        <header id="header" class="col grid-12 end">
-            <div class="center-content">
-                <h1>Gareth Fuller - HTML5 Base</h1>
-
-                <!-- Main navigation -->
-                <nav id="main-nav">
-                    <ul>
-                        <li class="first"><a href="index.php" class="active" title="index"><span data-icon="&#128240;"></span>Forms</a></li>
-                        <li><a href="tags.php" title="tags"><span data-icon="&#59148;"></span>Tags</a></li>
-                        <li><a href="grid.php" title="grid"><span data-icon="&#9871;"></span>Grid</a></li>
-                        <li><a href="grid.php" title="grid"><span data-icon="&#128247;"></span>Gallery</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <div class="center-content">
