@@ -8,6 +8,16 @@
     font-size:(1 / $base-font) * $px + em;
 }
 
+@mixin em-line-height($px:12){
+    line-height:(1 / $base-font) * $px + em;
+}  
+
+@mixin block-left(){
+    display:block;
+    float:left;
+}
+    
+
 @mixin drop-shadow($left-offset:0, $top-offset:5px, $blur:5px, $height:0, $color:#222){
     -moz-box-shadow: $left-offset $top-offset $blur $height $color;
     -webkit-box-shadow: $left-offset $top-offset $blur $height $color;
@@ -21,12 +31,19 @@
 }
 
 
-@mixin bg-gradient($from:#222, $to:#fff){
-    background: -moz-linear-gradient(top, $from 0%, $to 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
-    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
-    background: -o-linear-gradient(top, $from 0%,$to 100%);
-    background: -ms-linear-gradient(top, $from 0%,$to 100%);
-    background: linear-gradient(to bottom, $from 0%,$to 100%); 
-    
+@mixin bg-gradient($from:#222, $to:#fff, $from-percentage:0%, $to-percentage:100%){
+    background: -moz-linear-gradient(top, $from $from-percentage, $to $to-percentage);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($from-percentage,$from), color-stop($to-percentage,$to));
+    background: -webkit-linear-gradient(top, $from $from-percentage,$to $to-percentage);
+    background: -o-linear-gradient(top, $from $from-percentage,$to $to-percentage);
+    background: -ms-linear-gradient(top, $from $from-percentage,$to $to-percentage);
+    background: linear-gradient(to bottom, $from $from-percentage,$to $to-percentage);  
+}
+
+@mixin rotate($amount:0){
+    transform: rotate($amount+deg);
+    -ms-transform: rotate($amount+deg);
+    -webkit-transform: rotate($amount+deg);
+    -o-transform: rotate($amount+deg);
+    -moz-transform: rotate($amount+deg);
 }

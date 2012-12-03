@@ -6,6 +6,7 @@
 body {
     /* base font size */
     font-size:$base-font+'px';
+    @include em-line-height($base-font + 3);
     color: lighten($base-color, 20%);
     font-family: 'Raleway', sans-serif;
 }
@@ -14,12 +15,14 @@ body {
 
 h1 {
     @include em-font(26);
+    @include em-line-height(26);
     font-weight: 400;
     color:$off-white;
 }
 
 h2 {
     @include em-font(18);
+    @include em-line-height(18);
     font-weight: 700;
     margin: 0 0 20px 0;
     display: block;
@@ -29,6 +32,7 @@ h2 {
 
 h3 {
     @include em-font(16);
+    @include em-line-height(16);
     font-weight: 400;
     margin:0;
 }
@@ -48,4 +52,8 @@ ul {
 }
 li {
     margin: 0 0 10px 0;
+}
+
+em{
+    font-weight:700;
 }

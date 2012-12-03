@@ -11,7 +11,7 @@
     @include drop-shadow(0, 0, 13px, 3px);
     border-bottom:3px solid $secondary-color;
     position:fixed;
-    z-index:2;
+    z-index:3;
 }
 h1 {
     float:left;
@@ -57,6 +57,7 @@ h1 {
 
 #main-nav li a span{
     @include em-font(60);
+    @include em-line-height($base-font);
     float:left;
     width:100%;
     speak: none; /* Not to be trusted, but hey. */

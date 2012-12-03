@@ -16,12 +16,8 @@ $remaining-page: $site-width - $total-gutter;
 $col-width: (($remaining-page / $cols) / $site-width) * 100%;
 $col-width-abs: ($remaining-page / $cols);
 
-$blue: #8fd8d8;
-$red: #856363;
-$green: #8ba870;
-$grey: #666;
-$light-grey: #444;
 $off-white: #eee;
 
 $base-color: #222;
 $secondary-color: #15A2ED;
+$tertiary-color: #dddddd;

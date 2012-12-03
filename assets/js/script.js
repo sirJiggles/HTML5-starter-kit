@@ -26,24 +26,18 @@ function accordianJs(){
     
     $('.accordian-slide').slideUp();
     
-    $('#accordian').find('a').click(function(){
+    $('#accordian').find('a').click(function(e){
+        
+        e.preventDefault();
+        
         if (!$(this).hasClass('open')){
             
             $('.accordian-slide').slideUp();
-            
             $(this).next().slideToggle();
             $('#accordian').find('a').removeClass('open');
             $(this).toggleClass('open');
-
-            console.log($(this).find('span').attr('data-icon'));
             
-            if($(this).find('span').attr('data-icon') == '\&#59236;'){
-                $(this).find('span').attr('data-icon', '\&#59239;');
-            }else{
-                $(this).find('span').attr('data-icon', '\&#59236;');
-            }
         }
-        return false;
     })
     
     runAccordian = true;

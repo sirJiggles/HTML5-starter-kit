@@ -107,17 +107,20 @@ table {
 body {
   /* base font size */
   font-size: "16px";
+  line-height: 1.1875em;
   color: #555555;
   font-family: 'Raleway', sans-serif; }
 
 /* ======== Headings ======= */
 h1 {
   font-size: 1.625em;
+  line-height: 1.625em;
   font-weight: 400;
   color: #eeeeee; }
 
 h2 {
   font-size: 1.125em;
+  line-height: 1.125em;
   font-weight: 700;
   margin: 0 0 20px 0;
   display: block;
@@ -126,6 +129,7 @@ h2 {
 
 h3 {
   font-size: 1em;
+  line-height: 1em;
   font-weight: 400;
   margin: 0; }
 
@@ -140,6 +144,9 @@ ul {
 
 li {
   margin: 0 0 10px 0; }
+
+em {
+  font-weight: 700; }
 
 /* Form styles */
 /* CSS validation overrides */
@@ -205,7 +212,7 @@ meter {
   box-shadow: 0 0 13px 3px #222222;
   border-bottom: 3px solid #15a2ed;
   position: fixed;
-  z-index: 2; }
+  z-index: 3; }
 
 h1 {
   float: left;
@@ -248,6 +255,7 @@ h1 {
 
 #main-nav li a span {
   font-size: 3.75em;
+  line-height: 1em;
   float: left;
   width: 100%;
   speak: none;
@@ -275,15 +283,16 @@ h1 {
   text-align: center; }
 
 body {
-  background-color: white; }
+  background-color: #dddddd; }
 
 #main {
-  padding: 85px 0 0 0;
+  padding: 95px 0 0 0;
   display: block;
   float: left;
   width: 100%; }
 
-#accordian a,
+/* Accordian styles */
+#accordian a.accordian-link,
 .grid-demo h3 {
   background-color: #15a2ed;
   color: #eeeeee;
@@ -291,16 +300,46 @@ body {
   width: 96%;
   display: block;
   float: left;
-  margin: 0 0 15px 0;
+  margin: 0 0 1px 0;
   text-decoration: none; }
 
-#accordian a span {
-  float: right;
-  color: white; }
+#accordian .accordian-slide {
+  display: block;
+  float: left;
+  padding: 2%;
+  background: #f7f7f7;
+  width: 94%;
+  position: relative;
+  z-index: 1;
+  border-left: 10px solid #15a2ed; }
 
-#accordian a h3 {
+#accordian a.accordian-link span {
+  float: right;
+  color: white;
+  transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -moz-transform: rotate(270deg); }
+
+#accordian a.accordian-link h3 {
   float: left;
   display: inline-block; }
+
+#accordian a.open {
+  -moz-box-shadow: 0 13px 15px -10px #222222;
+  -webkit-box-shadow: 0 13px 15px -10px #222222;
+  box-shadow: 0 13px 15px -10px #222222;
+  position: relative;
+  z-index: 2;
+  margin: 0; }
+
+#accordian a.open span {
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -moz-transform: rotate(0deg); }
 
 /* Gallery */
 #gallery-container {
@@ -312,6 +351,7 @@ body {
   -webkit-box-shadow: 0px 0px 15px 1px #222222;
   box-shadow: 0px 0px 15px 1px #222222;
   width: 600px;
+  display: block;
   float: left;
   overflow: hidden;
   position: relative;

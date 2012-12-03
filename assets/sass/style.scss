@@ -27,36 +27,59 @@
 
 
 body{
-    background-color:white;
+    background-color:$tertiary-color;
 }
 
 #main{
-    padding:85px 0 0 0;
-    display:block;
-    float:left;
+    padding:95px 0 0 0;
+    @include block-left;
     width:100%;
 }
 
-#accordian a,
+/* Accordian styles */ 
+
+#accordian a.accordian-link,
 .grid-demo h3{
     background-color: $secondary-color;
     color:$off-white;
     padding:10px 2% 10px 2%;
     width:96%;
-    display:block;
-    float:left;
-    margin: 0 0 15px 0;
+    @include block-left;
+    margin: 0 0 1px 0;
     text-decoration:none;
 }
 
-#accordian a span{
-    float:right;
-    color:white;
+#accordian .accordian-slide{
+    @include block-left;
+    padding: 2%;
+    background: lighten($tertiary-color, 10%);
+    width: 94%;
+    position:relative;
+    z-index:1;
+    border-left:10px solid $secondary-color;
 }
 
-#accordian a h3{
+#accordian a.accordian-link span{
+    float:right;
+    color:white;
+    @include rotate(270);
+}
+
+#accordian a.accordian-link h3{
     float:left;
     display:inline-block;
+}
+
+#accordian a.open{
+    @include drop-shadow(0, 13px, 15px, -10px);
+    position:relative;
+    z-index:2;
+    margin:0;
+}
+
+#accordian a.open span{
+    @include rotate();
+    
 }
 
 
@@ -70,7 +93,7 @@ body{
 #gallery{
     @include drop-shadow(0px, 0px, 15px, 1px, $base-color);
     width:600px;
-    float:left;
+    @include block-left;
     overflow:hidden;
     position:relative;
     width:100%;
@@ -109,8 +132,7 @@ body{
 }
 
 #gallery ul li h3{
-    display:block;
-    float:left;
+    @include block-left;
     padding:0;
     margin:20px 10% 20px 10%;
     width:80%;
@@ -182,8 +204,7 @@ body{
 
 #progress-bar{
     width:100%;
-    display:block;
-    float:left
+    @include block-left;
     
 }
 
