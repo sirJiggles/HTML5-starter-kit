@@ -23,12 +23,12 @@
         </div>
     </header>
 
-    <div class="center-content">
+    <div class="center-content main-content">
 
 <!-- Main content -->
 <div id="main" role="main">
 
-    <section id="content" class="col grid-12 end">
+    <section id="content">
 
         <div class="row grid-demo">
             <div class="col grid-1">
@@ -160,7 +160,7 @@
                 <h3>11</h3>
             </div>
             <div class="col grid-1 end">
-                <h3>11</h3>
+                <h3>1</h3>
             </div>
 
             <div class="col grid-12">

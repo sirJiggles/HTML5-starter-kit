@@ -3,15 +3,41 @@
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
+/* Cusotom font face */
+@font-face {
+    font-family: 'entypo';
+    src: url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot');
+    src: url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.woff') format('woff'),
+         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.ttf') format('truetype'),
+         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "entypo";
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+}
+
 body {
     /* base font size */
-    font-size:$base-font+'px';
+    font-size:$base-font+px;
     @include em-line-height($base-font + 3);
     color: lighten($base-color, 20%);
-    font-family: 'Raleway', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
 }
 
 /* ======== Headings ======= */
+
+h1,h2,h3{
+    font-family: 'Raleway', sans-serif;
+}
 
 h1 {
     @include em-font(26);

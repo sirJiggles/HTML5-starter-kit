@@ -18,6 +18,7 @@
 /* MOBILE LANDSCAPE TO TABLET PORTRAIT */
 @media only screen and (max-width: $tablet) {
     
+    /* Nav */
     #main-nav{
         display:block;
         float:left;
@@ -39,14 +40,40 @@
     }
     
     #gallery-container{
-        
         width:100%;
     }
     
+    #accordian .accordian-slide{
+        border-left: 5px solid $secondary-color;
+    }
+    
+    /* Forms */
+    form input {
+        width: 94%;
+        padding:2%
+    }
+    form input[type='search'] {
+        width:100%;
+    }
+    form label{
+        padding:0;
+        width:94%
+    }
+    
+    progress,
+    meter {
+        width: 94%;
+    }
+   
 }
 
 /* MOBILE LANDSCAPE AND DOWN */
 @media only screen and (max-width: $mobile) {
+    
+    /* Grid */
+    .grid-1,
+    .grid-2,
+    .grid-3,
     .grid-4,
     .grid-5,
     .grid-6,
@@ -58,21 +85,34 @@
         width:100%;
     }
     
-    /*#main-nav{
-        width:100%;
-        margin:10px 0 0 0;
+    /* Changes to enable finger scroll */
+    .center-content{
+        margin: 0;
+        float: left;
+        padding: 0 1% 0 1%;
+        width: 88%;
     }
-    #main-nav ul{
-        padding:0;
-        margin:0;
+    .center-content.main-content{
+        
+        background-color:$tertiary-color;
+        @include drop-shadow(1px, 0px, 10px, 0);
     }
-    #main-nav ul li{
-        width:100%;
-        margin:0 0 1px 0;
+    body{
+        background-color:darken($tertiary-color, 10%);
     }
-    #main-nav ul li a{
-        width:96%;
-        padding:15px 2% 15px 2%;
-    } */ 
     
+    #accordian .accordian-slide{
+        border-left: 1px solid $secondary-color;
+    }
+    
+    /* Forms */
+    form input {
+        width: 89%;
+        padding:4%
+    }
+
+    form input[type='search'] {
+        width:98%;
+    }
+   
 }

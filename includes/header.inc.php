@@ -53,3 +53,6 @@
         
     </head>
     <body>
+        
+        <!-- used for sticky footer -->
+        <div id="site-wrapper">

@@ -5,13 +5,24 @@
  * @author Gareth Fuller
  */
 ?>
-
-        <footer>
-
+        </div>
+        <!-- end center content -->
+        
+        <!-- for sticky footer -->
+        <div class="push"></div>
+        
+        </div>
+        <!-- end site wrapper -->
+        
+        
+        <footer id="site-footer">
+            <div class="center-content">
+                <p>garethfuller.com</p>
+            </div>
         </footer>
 
             
-        </div>
+        
         
         <!-- Load all JS last -->
         <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>

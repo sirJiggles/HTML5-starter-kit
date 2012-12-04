@@ -104,14 +104,34 @@ table {
   width: 100.0%; }
 
 /* Typography style sheet */
+/* Cusotom font face */
+@font-face {
+  font-family: 'entypo';
+  src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot");
+  src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.woff") format("woff"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.ttf") format("truetype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.svg#entypo") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[data-icon]:before {
+  font-family: "entypo";
+  content: attr(data-icon);
+  speak: none;
+  /* Not to be trusted, but hey. */
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center; }
+
 body {
   /* base font size */
-  font-size: "16px";
+  font-size: 16px;
   line-height: 1.1875em;
   color: #555555;
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /* ======== Headings ======= */
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif; }
+
 h1 {
   font-size: 1.625em;
   line-height: 1.625em;
@@ -158,7 +178,8 @@ form label {
   width: 40%;
   float: left;
   padding: 0 0 2% 0;
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  font-family: 'Raleway', sans-serif; }
 
 form legend {
   margin: 0 0 10px 0;
@@ -167,13 +188,16 @@ form legend {
   width: 96%;
   background-color: #15a2ed;
   padding: 10px 2% 10px 2%;
-  color: white; }
+  color: white;
+  font-family: 'Raleway', sans-serif; }
 
 form input {
   width: 57%;
   margin: 0 0 2% 0;
-  padding: 7px;
-  border: 2px solid #d4d4d4; }
+  padding: 1%; }
+
+form input[type='search'] {
+  width: 59%; }
 
 form input[type='submit'] {
   background-color: #15a2ed;
@@ -265,25 +289,38 @@ h1 {
   text-align: center;
   margin-top: -0.2em; }
 
-/* Main stylesheet */
-@font-face {
-  font-family: 'entypo';
-  src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot");
-  src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.woff") format("woff"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.ttf") format("truetype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.svg#entypo") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+.push {
+  height: 150px;
+  clear: left; }
 
-[data-icon]:before {
-  font-family: "entypo";
-  content: attr(data-icon);
-  speak: none;
-  /* Not to be trusted, but hey. */
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center; }
+#site-footer {
+  border-top: 3px solid #15a2ed;
+  background-color: #222222;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  float: left;
+  height: 107px; }
+
+#site-footer p {
+  color: white; }
+
+/* Main stylesheet */
+html, body {
+  height: 100%; }
 
 body {
   background-color: #dddddd; }
+
+#site-wrapper {
+  height: 100%;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -150px; }
+
+#content {
+  width: 100%;
+  padding: 0 0 20px 0; }
 
 #main {
   padding: 95px 0 0 0;
@@ -301,7 +338,14 @@ body {
   display: block;
   float: left;
   margin: 0 0 1px 0;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear; }
+
+#accordian a.accordian-link:hover {
+  background-color: #44b5f1; }
 
 #accordian .accordian-slide {
   display: block;
@@ -408,15 +452,12 @@ body {
 
 #thumbnails-wrapper {
   float: left;
-  margin: 40px 0 10px 0;
+  margin: 10px 0 10px 0;
   width: 100%;
   overflow: hidden;
   position: relative;
   padding: 10px 0 10px 0;
-  background-color: #555555;
-  -moz-box-shadow: 0px 0px 15px 1px #222222;
-  -webkit-box-shadow: 0px 0px 15px 1px #222222;
-  box-shadow: 0px 0px 15px 1px #222222; }
+  background-color: #d0d0d0; }
 
 #thumbnails-wrapper li {
   float: left;
@@ -429,7 +470,7 @@ body {
   filter: alpha(opacity=50);
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  background-color: #272727; }
+  background-color: #15a2ed; }
 
 #thumbnails {
   overflow: hidden;
@@ -489,7 +530,8 @@ a.gallery-buttons-thumbs.previous {
 /* DESKTOP - LARGE */
 /* TABLET PORTRAIT TO DESKTOP */
 /* MOBILE LANDSCAPE TO TABLET PORTRAIT */
-@media only screen and (max-width: 939px) {
+@media only screen and (max-width: 800px) {
+  /* Nav */
   #main-nav {
     display: block;
     float: left;
@@ -507,9 +549,32 @@ a.gallery-buttons-thumbs.previous {
     display: none; }
 
   #gallery-container {
-    width: 100%; } }
+    width: 100%; }
+
+  #accordian .accordian-slide {
+    border-left: 5px solid #15a2ed; }
+
+  /* Forms */
+  form input {
+    width: 94%;
+    padding: 2%; }
+
+  form input[type='search'] {
+    width: 100%; }
+
+  form label {
+    padding: 0;
+    width: 94%; }
+
+  progress,
+  meter {
+    width: 94%; } }
 /* MOBILE LANDSCAPE AND DOWN */
 @media only screen and (max-width: 320px) {
+  /* Grid */
+  .grid-1,
+  .grid-2,
+  .grid-3,
   .grid-4,
   .grid-5,
   .grid-6,
@@ -520,19 +585,29 @@ a.gallery-buttons-thumbs.previous {
   .grid-11 {
     width: 100%; }
 
-  /*#main-nav{
-      width:100%;
-      margin:10px 0 0 0;
-  }
-  #main-nav ul{
-      padding:0;
-      margin:0;
-  }
-  #main-nav ul li{
-      width:100%;
-      margin:0 0 1px 0;
-  }
-  #main-nav ul li a{
-      width:96%;
-      padding:15px 2% 15px 2%;
-  } */ }
+  /* Changes to enable finger scroll */
+  .center-content {
+    margin: 0;
+    float: left;
+    padding: 0 1% 0 1%;
+    width: 88%; }
+
+  .center-content.main-content {
+    background-color: #dddddd;
+    -moz-box-shadow: 1px 0px 10px 0 #222222;
+    -webkit-box-shadow: 1px 0px 10px 0 #222222;
+    box-shadow: 1px 0px 10px 0 #222222; }
+
+  body {
+    background-color: #c4c4c4; }
+
+  #accordian .accordian-slide {
+    border-left: 1px solid #15a2ed; }
+
+  /* Forms */
+  form input {
+    width: 89%;
+    padding: 4%; }
+
+  form input[type='search'] {
+    width: 98%; } }

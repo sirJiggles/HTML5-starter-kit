@@ -1,2 +1,20 @@
 @import "_mixins.scss";
 @import "_global-vars.scss";
+
+.push {
+    height: $footer-height+px;
+    clear:left;
+}
+
+#site-footer{
+    border-top:3px solid $secondary-color;
+    background-color:$base-color;
+    width:100%;
+    padding:20px 0 20px 0;
+    float:left;
+    height:($footer-height - 43)+px;
+}
+
+#site-footer p{
+    color:white;
+}

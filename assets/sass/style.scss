@@ -3,31 +3,25 @@
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
-
-
-@font-face {
-    font-family: 'entypo';
-    src: url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot');
-    src: url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot?#iefix') format('embedded-opentype'),
-         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.woff') format('woff'),
-         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.ttf') format('truetype'),
-         url('http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.svg#entypo') format('svg');
-    font-weight: normal;
-    font-style: normal;
+html, body {
+    height: 100%;
 }
-
-[data-icon]:before {
-  font-family: "entypo";
-  content: attr(data-icon);
-  speak: none; /* Not to be trusted, but hey. */
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
-}
-
 
 body{
     background-color:$tertiary-color;
+}
+
+#site-wrapper{
+    height:100%;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom:-$footer-height+px;
+}
+
+#content{
+    width:100%;
+    padding:0 0 20px 0;
 }
 
 #main{
@@ -47,6 +41,11 @@ body{
     @include block-left;
     margin: 0 0 1px 0;
     text-decoration:none;
+    @include transition();
+}
+
+#accordian a.accordian-link:hover{
+    background-color: lighten($secondary-color, 10%);
 }
 
 #accordian .accordian-slide{
@@ -159,13 +158,12 @@ body{
 
 #thumbnails-wrapper{
     float:left;
-    margin:40px 0 10px 0;
+    margin:10px 0 10px 0;
     width: 100%;
     overflow: hidden;
     position: relative;
     padding:10px 0 10px 0;
-    background-color:lighten($base-color, 20%);
-    @include drop-shadow(0px, 0px, 15px, 1px, $base-color);
+    background-color:darken($tertiary-color, 5%);
 }
 
 #thumbnails-wrapper li{
@@ -178,11 +176,8 @@ body{
 }
 
 #thumbnails-wrapper li.active{
-    filter: alpha(opacity=50);
-    opacity:0.5;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    background-color:#272727;
-    
+    @include opacity();
+    background-color:$secondary-color;
 }
 
 #thumbnails{
@@ -198,8 +193,7 @@ body{
     float:left;
     list-style-type:none;
     padding:0;
-    margin:0;
-    
+    margin:0; 
 }
 
 #progress-bar{

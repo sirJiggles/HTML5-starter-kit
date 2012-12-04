@@ -47,3 +47,16 @@
     -o-transform: rotate($amount+deg);
     -moz-transform: rotate($amount+deg);
 }
+
+@mixin transition($what:all, $speed:0.3s, $easing:linear){
+    transition: $what $speed $easing;
+    -moz-transition: $what $speed $easing;
+    -webkit-transition: $what $speed $easing;
+    -o-transition: $what $speed $easing;
+} 
+
+@mixin opacity($amount:50){
+    filter: alpha(opacity=50);
+    opacity:0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}

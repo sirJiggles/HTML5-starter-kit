@@ -31,6 +31,7 @@ form label {
     float: left;
     padding: 0 0 2% 0;
     line-height: 1.8em;
+    font-family: 'Raleway', sans-serif;
 }
 
 form legend {
@@ -41,13 +42,17 @@ form legend {
     background-color: $secondary-color;
     padding: 10px 2% 10px 2%;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 form input {
     width: 57%;
     margin: 0 0 2% 0;
-    padding: 7px;
-    border: 2px solid lighten($base-color, 70%);
+    padding: 1%;
+}
+
+form input[type='search'] {
+    width:59%;
 }
 
 form input[type='submit']{
