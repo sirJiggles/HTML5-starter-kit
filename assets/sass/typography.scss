@@ -15,14 +15,13 @@
     font-style: normal;
 }
 
-[data-icon]:before {
-  font-family: "entypo";
-  content: attr(data-icon);
-  speak: none; /* Not to be trusted, but hey. */
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
+span.icon{
+    font-family: 'entypo';
+    font-size: 3.2em;
+    line-height: 1;
+    margin-top: -29px;
 }
+
 
 body {
     /* base font size */

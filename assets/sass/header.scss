@@ -12,18 +12,55 @@
     border-bottom:3px solid $secondary-color;
     position:fixed;
     z-index:3;
+    left:0;
+    height:75px;
+}
+
+.header-wrapper{
+    position:relative;
+}
+
+.mobile-nav{
+    float:left;
+    display:none;
+    border:1px solid lighten($base-color, 10%);
+    @include rounded(5);
+    color:white;
+    padding:5px;
+    margin:5px 0 5px 0;
+}
+
+.mobile-nav.active,
+.mobile-nav:hover{
+    background-color:lighten($base-color, 10%);
+    border:1px solid $base-color;
+}
+
+.mobile-nav span{
+    @include block-left();
 }
 h1 {
     float:left;
     margin: 18px 0 0 0;
     @include text-shadow(2px, 2px, 6px, #000);
  }
+ 
+#main-nav{
+    display: block;
+    position: fixed;
+    z-index: 4;
+    width: 96%;
+    padding: 0 2% 0 2%;
+    left: 0;
+}
+
 
 #main-nav ul{
-    display:block;
-    float:right;
-    margin:0;
-    width:306px;
+    margin: 0;
+    padding:0;
+    float: right;
+    width: 306px;
+    
 }
 #main-nav ul li {
     display: block;
@@ -56,13 +93,9 @@ h1 {
 }
 
 #main-nav li a span{
-    @include em-font(60);
-    @include em-line-height($base-font);
     float:left;
     width:100%;
     speak: none; /* Not to be trusted, but hey. */
     display: inline-block;
     text-decoration: inherit;
-    text-align: center;
-    margin-top:-0.2em;
 }

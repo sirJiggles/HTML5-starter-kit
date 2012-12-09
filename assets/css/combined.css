@@ -112,14 +112,11 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-[data-icon]:before {
-  font-family: "entypo";
-  content: attr(data-icon);
-  speak: none;
-  /* Not to be trusted, but hey. */
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center; }
+span.icon {
+  font-family: 'entypo';
+  font-size: 3.2em;
+  line-height: 1;
+  margin-top: -29px; }
 
 body {
   /* base font size */
@@ -236,7 +233,32 @@ meter {
   box-shadow: 0 0 13px 3px #222222;
   border-bottom: 3px solid #15a2ed;
   position: fixed;
-  z-index: 3; }
+  z-index: 3;
+  left: 0;
+  height: 75px; }
+
+.header-wrapper {
+  position: relative; }
+
+.mobile-nav {
+  float: left;
+  display: none;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin: 5px 0 5px 0; }
+
+.mobile-nav.active,
+.mobile-nav:hover {
+  background-color: #3c3c3c;
+  border: 1px solid #222222; }
+
+.mobile-nav span {
+  display: block;
+  float: left; }
 
 h1 {
   float: left;
@@ -244,10 +266,18 @@ h1 {
   text-shadow: 2px 2px 6px black;
   filter: dropshadow(color=black, offx=1, offy=1); }
 
-#main-nav ul {
+#main-nav {
   display: block;
-  float: right;
+  position: fixed;
+  z-index: 4;
+  width: 96%;
+  padding: 0 2% 0 2%;
+  left: 0; }
+
+#main-nav ul {
   margin: 0;
+  padding: 0;
+  float: right;
   width: 306px; }
 
 #main-nav ul li {
@@ -278,16 +308,12 @@ h1 {
   color: white; }
 
 #main-nav li a span {
-  font-size: 3.75em;
-  line-height: 1em;
   float: left;
   width: 100%;
   speak: none;
   /* Not to be trusted, but hey. */
   display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
-  margin-top: -0.2em; }
+  text-decoration: inherit; }
 
 .push {
   height: 150px;
@@ -316,7 +342,8 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin-bottom: -150px; }
+  margin-bottom: -150px;
+  position: relative; }
 
 #content {
   width: 100%;
@@ -326,6 +353,8 @@ body {
   padding: 95px 0 0 0;
   display: block;
   float: left;
+  width: 100%;
+  position: relative;
   width: 100%; }
 
 /* Accordian styles */
@@ -532,45 +561,53 @@ a.gallery-buttons-thumbs.previous {
 /* MOBILE LANDSCAPE TO TABLET PORTRAIT */
 @media only screen and (max-width: 800px) {
   /* Nav */
-  #main-nav {
-    display: block;
-    float: left;
-    width: 100%; }
-
-  #main-nav ul {
-    padding: 0;
-    float: left;
-    width: 100%; }
-
-  #main-nav ul li {
-    width: 23%; }
-
-  h1 {
-    display: none; }
-
-  #gallery-container {
-    width: 100%; }
-
-  #accordian .accordian-slide {
-    border-left: 5px solid #15a2ed; }
-
-  /* Forms */
+  /*#main-nav{
+      display:block;
+      float:left;
+      width:100%;
+  }
+  
+  #main-nav ul{
+      padding:0;
+      float:left;
+      width:100%;
+  }
+  
+  #main-nav ul li{
+      width:23%;
+  }
+  
+  h1{
+      display:none;
+  }
+  
+  #gallery-container{
+      width:100%;
+  }
+  
+  #accordian .accordian-slide{
+      border-left: 5px solid $secondary-color;
+  }
+  
+  /* Forms 
   form input {
-    width: 94%;
-    padding: 2%; }
-
+      width: 94%;
+      padding:2%
+  }
   form input[type='search'] {
-    width: 100%; }
-
-  form label {
-    padding: 0;
-    width: 94%; }
-
+      width:100%;
+  }
+  form label{
+      padding:0;
+      width:94%
+  }
+  
   progress,
   meter {
-    width: 94%; } }
+      width: 94%;
+  }*/ }
 /* MOBILE LANDSCAPE AND DOWN */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 900px) {
   /* Grid */
   .grid-1,
   .grid-2,
@@ -585,21 +622,8 @@ a.gallery-buttons-thumbs.previous {
   .grid-11 {
     width: 100%; }
 
-  /* Changes to enable finger scroll */
-  .center-content {
-    margin: 0;
-    float: left;
-    padding: 0 1% 0 1%;
-    width: 88%; }
-
-  .center-content.main-content {
-    background-color: #dddddd;
-    -moz-box-shadow: 1px 0px 10px 0 #222222;
-    -webkit-box-shadow: 1px 0px 10px 0 #222222;
-    box-shadow: 1px 0px 10px 0 #222222; }
-
-  body {
-    background-color: #c4c4c4; }
+  h1 {
+    display: none; }
 
   #accordian .accordian-slide {
     border-left: 1px solid #15a2ed; }
@@ -610,4 +634,94 @@ a.gallery-buttons-thumbs.previous {
     padding: 4%; }
 
   form input[type='search'] {
-    width: 98%; } }
+    width: 98%; }
+
+  #main {
+    padding: 65px 0 0 0; }
+
+  /* MAIN NAVIATION */
+  #header {
+    height: 42px; }
+
+  #main-nav {
+    position: absolute;
+    background-color: #222222;
+    -moz-box-shadow: inset -4px -4px 10px black;
+    -webkit-box-shadow: inset -4px -4px 10px black;
+    box-shadow: inset -4px -4px 10px black;
+    top: 45px;
+    width: 70%;
+    left: -100%;
+    height: 100%;
+    z-index: 2;
+    padding: 0;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+    transform: translate(0%); }
+
+  #main {
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+    transform: translate(0%); }
+
+  /* CSS 3 TRANSLATIONS */
+  #main-nav.open {
+    -webkit-transform: translate(140%);
+    -moz-transform: translate(140%);
+    -ms-transform: translate(140%);
+    -o-transform: translate(140%);
+    transform: translate(140%); }
+
+  #main.open {
+    -webkit-transform: translate(70%);
+    -moz-transform: translate(70%);
+    -ms-transform: translate(70%);
+    -o-transform: translate(70%);
+    transform: translate(70%); }
+
+  #main-nav .center-content {
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+
+  #main-nav ul {
+    float: left;
+    width: 100%; }
+
+  #main-nav ul li {
+    width: 100%;
+    margin: 0;
+    border: none; }
+
+  #main-nav ul li span {
+    width: 40px;
+    text-align: left;
+    margin: -29px 0 0 12%; }
+
+  #main-nav ul li a {
+    margin: 0 0 5px 0;
+    padding: 10px 0 10px 0;
+    @inclue em-font(18);
+    text-align: left;
+    font-size: 1.0em; }
+
+  #main-nav ul li a.active {
+    background-color: #3c3c3c; }
+
+  .mobile-nav {
+    display: block; }
+
+  #main-nav ul li.first {
+    border: none; } }

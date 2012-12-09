@@ -1,20 +1,4 @@
-<?php include('includes/header.inc.php'); ?>
-
-<header id="header" class="col grid-12 end" role="banner">
-        <div class="center-content">
-            <h1>Gareth Fuller - HTML5 Base</h1>
-
-            <!-- Main navigation -->
-            <nav id="main-nav" role="navigation">
-                <ul>
-                    <li class="first"><a href="index.php" title="index" class="active"><span data-icon="&#128240;"></span>Forms</a></li>
-                    <li><a href="tags.php" title="tags"><span data-icon="&#59148;"></span>Tags</a></li>
-                    <li><a href="grid.php" title="grid"><span data-icon="&#9871;"></span>Grid</a></li>
-                    <li><a href="gallery.php" title="gallery"><span data-icon="&#128247;"></span>Gallery</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <?php include('includes/header.inc.php'); ?>
 
     <div class="center-content main-content">
 

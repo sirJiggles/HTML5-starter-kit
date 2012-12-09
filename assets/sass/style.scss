@@ -9,6 +9,7 @@ html, body {
 
 body{
     background-color:$tertiary-color;
+    
 }
 
 #site-wrapper{
@@ -17,6 +18,7 @@ body{
     height: auto !important;
     height: 100%;
     margin-bottom:-$footer-height+px;
+    position:relative;
 }
 
 #content{
@@ -27,6 +29,8 @@ body{
 #main{
     padding:95px 0 0 0;
     @include block-left;
+    width:100%;
+    position:relative;
     width:100%;
 }
 

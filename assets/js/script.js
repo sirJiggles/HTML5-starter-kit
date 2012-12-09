@@ -3,6 +3,35 @@
  * 
  * @author Gareth Fuller
  */
+
+
+/* 
+ * This function is used for detecting browser CSS3 functionality support 
+ * 
+ * Original code found here http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-detect-css-support-in-browsers-with-javascript/
+ * only modified slightly (to exlude khtml webkit and break in the while loop)
+ */
+var supports = (function(prop) {  
+   var div = document.createElement('div'),  
+      vendors = 'Ms O Moz Webkit'.split(' '),  
+      len = vendors.length;  
+   
+    if ( prop in div.style ) return true;  
+    prop = prop.replace(/^[a-z]/, function(val) {  
+        return val.toUpperCase();  
+    });  
+    while(len--) {  
+        if ( vendors[len] + prop in div.style ) {  
+        return true;  
+        break;
+        }  
+    }  
+    return false;  
+
+});
+
+
+/* Document ready function */
 $(document).ready(function() {
     
     // init syntax highlighter
@@ -17,6 +46,12 @@ $(document).ready(function() {
     if ($('#gallery').length > 0){
         galleryJs();
     }
+    
+    /* Mobile navigation */
+    $('.mobile-nav').click(function(e){
+        e.preventDefault();
+        mobileNavToggle();
+    });
     
     
 });
@@ -41,7 +76,48 @@ function accordianJs(){
     })
     
     runAccordian = true;
-   
+}
+
+/* Function for the mobile navigation */
+function mobileNavToggle(){
+    
+    $('.mobile-nav').toggleClass('active');
+    
+    if (supports('transform')){
+        $('#main-nav').toggleClass('open');
+        $('#site-wrapper').toggleClass('open');
+        $('#main').toggleClass('open');
+    }
+
+    var speed = 500;
+
+    if ($('.mobile-nav').hasClass('active')){
+        if (!supports('transform')){
+            $('#main-nav').stop().animate({
+                left: '0' 
+            }, speed);
+            $('#main').stop().animate({
+                left: '70%'
+            }, speed, function(){
+                $('#site-wrapper').css('overflow', 'hidden');
+            });
+        }else{
+            $('#site-wrapper').css('overflow', 'hidden');
+        }
+    }else{
+        if (!supports('transform')){
+            $('#main-nav').stop().animate({
+                left: '-100%' 
+            }, speed);
+            $('#main').stop().animate({
+                left: '0'
+            }, speed, function(){
+                $('#site-wrapper').css('overflow', 'auto');
+            });
+        }else{
+            $('#site-wrapper').css('overflow', 'auto');
+        }
+    }
 }
 
 /* function to init the gallery */

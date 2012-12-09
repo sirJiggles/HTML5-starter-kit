@@ -1,7 +1,7 @@
-@mixin rounded($radius: 5px) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+@mixin rounded($radius: 5) {
+    border-radius: $radius+px;
+    -webkit-border-radius: $radius+px;
+    -moz-border-radius: $radius+px;
 }
 
 @mixin em-font($px:12){
@@ -54,6 +54,14 @@
     -webkit-transition: $what $speed $easing;
     -o-transition: $what $speed $easing;
 } 
+
+@mixin translate($how-much:0px){
+    -webkit-transform: translate($how-much);
+    -moz-transform: translate($how-much);
+    -ms-transform: translate($how-much);
+    -o-transform: translate($how-much);
+    transform: translate($how-much);
+}
 
 @mixin opacity($amount:50){
     filter: alpha(opacity=50);
