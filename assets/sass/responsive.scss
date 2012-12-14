@@ -1,52 +1,30 @@
-/* Responsive styles */
+/* Responsive styles 
+
+Styles should be mobile first, this means mobile styles will be done by default
+and anything else will be added (enhansed) in this sheet
+
+*/
 
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
-/* DESKTOP - LARGE */
-@media only screen and (min-width: $large-screen) {
-    
-}
 
-/* TABLET PORTRAIT TO DESKTOP */
-@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
+/* MOBILE LANDSCAPE AND DOWN */
+@media only screen and (max-width: $mobile) {
     
+    // SHOULD NOT NEED ANYTHING HERE IF MOBILE FIRST ;D
+   
 }
 
 /* MOBILE LANDSCAPE TO TABLET PORTRAIT */
-@media only screen and (max-width: $tablet) {
-    
-    /* Nav */
-    /*#main-nav{
-        display:block;
-        float:left;
-        width:100%;
-    }
-    
-    #main-nav ul{
-        padding:0;
-        float:left;
-        width:100%;
-    }
-    
-    #main-nav ul li{
-        width:23%;
-    }
-    
-    h1{
-        display:none;
-    }
-    
-    #gallery-container{
-        width:100%;
-    }
-    
+@media only screen and (min-width: $mobile) and (max-width: $tablet){
+
     #accordian .accordian-slide{
         border-left: 5px solid $secondary-color;
     }
     
-    /* Forms 
-    form input {
+    /* Forms */
+    form input{
         width: 94%;
         padding:2%
     }
@@ -61,127 +39,150 @@
     progress,
     meter {
         width: 94%;
-    }*/
-   
+    }
 }
 
-/* MOBILE LANDSCAPE AND DOWN */
-@media only screen and (max-width: $mobile) {
+/* TABLET PORTRAIT TO DESKTOP */
+@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
     
-    /* Grid */
-    .grid-1,
-    .grid-2,
-    .grid-3,
-    .grid-4,
-    .grid-5,
-    .grid-6,
-    .grid-7,
-    .grid-8,
-    .grid-9,
-    .grid-10,
-    .grid-11{
-        width:100%;
+
+}
+
+/* DESKTOP - LARGE */
+@media only screen and (min-width: $large-screen) {
+    
+}
+
+
+/* 
+   THESE NEXT SET OF MEDIA QUERIES ARE CUSTOM BUT USUALLY REQUIRED FOR THINGS LIKE
+   THE GRID, THEY ARE THINGS LIKE 'ANYTHING BIGGER THAN TABLET ETC' 
+*/
+
+
+/* EVERYTHING ABOVE TABLET */
+@media only screen and (min-width: $tablet) {
+    // Generate grid
+    @for $i from 1 through $cols {
+        $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
+        .grid-#{$i} {
+            width: $new-width;
+        }
+    }
+    .col{
+        margin: 0 $gutter-width 0 0;
+    }
+    
+    .end {
+        margin: 0;
     }
     
     h1{
-        display:none;
-    }
-
-    #accordian .accordian-slide{
-        border-left: 1px solid $secondary-color;
+        text-indent:0px;
     }
     
-    /* Forms */
-    form input {
-        width: 89%;
-        padding:4%
-    }
-
-    form input[type='search'] {
-        width:98%;
+    /* Form styles */
+    progress,
+    meter {
+        width: 59%;
+        margin: 0 0 4% 0;
     }
     
+    form label{
+        width:40%;
+    }
+
+    
+}
+
+/* EVERYTHING ABOVE MOBILE */
+@media only screen and (min-width: $mobile) {
     #main{
-        padding:65px 0 0 0;
+        padding:95px 0 0 0;
     }
-    
-    /* MAIN NAVIATION */
     
     #header{
-        height:42px;
+        height:75px;
     }
-    
     #main-nav{
-        position:absolute;
-        background-color:$base-color;
-        @include drop-shadow(inset, -4px, -4px, 10px, #000);
-        top:45px;
-        width:70%;
-        left:-100%;
-        height:100%;
-        z-index:2;
-        padding:0;
-        @include transition();
-        @include translate(0%);
+        display: block;
+        position: fixed;
+        z-index: 4;
+        width: 96%;
+        padding: 0 2% 0 2%;
+        left: 0;
+        background:none;
+        @include no-drop-shadow();
+        height:auto;
+        top:0;
     }
     
-    #main{
-        @include transition();
-        @include translate(0%); 
-    }
-    
-    /* CSS 3 TRANSLATIONS */
-    #main-nav.open{
-        @include translate(140%);
-    }
-
-    #main.open{
-        @include translate(70%); 
+    #site-wrapper.css-nav-open #main-nav,
+    #site-wrapper.css-nav-open #main{
+       left:0;
     }
     
     #main-nav .center-content{
-        margin:0;
-        padding:0;
-        width:100%;
+        margin: 0 auto;
+        width: 90%;
+        padding: 0 5% 0 5%;
     }
     
+    /* MAIN NAVIGATION */
     #main-nav ul{
-        float:left;
-        width:100%;
+        float: right;
+        width: auto;
     }
     
     #main-nav ul li{
-        width:100%;
-        margin:0;
-        border:none;
-    }
-    
-    #main-nav ul li span{
-        width: 40px;
-        text-align: left;
-        margin: -29px 0 0 12%;
-    }
-    
-    #main-nav ul li a{
-        margin: 0 0 5px 0;
-        padding: 10px 0 10px 0;
-        @inclue em-font(18);
-        text-align:left;
-        font-size:1.0em;
-        
-    }
-    
-    #main-nav ul li a.active{
-        background-color:lighten($base-color, 10%);
-       
-    }
-    .mobile-nav{
-        display:block;
+        border-right:1px solid #444;
+        width:75px;
     }
     
     #main-nav ul li.first{
-        border:none;
+        border-left:1px solid #444;
     }
-   
-   
+    
+    .mobile-nav{
+        display:none;
+    }
+    
+    #main-nav ul li a{
+        margin:0;
+        padding:0;
+        width:75px;
+        height:75px;
+    }
+    
+    #main-nav ul li a.active{
+        background:none;
+    }
+    
+    
 }
+
+/* EVERYTHING FROM TABLET DOWN */
+@media only screen and (max-width: $tablet) {
+    #gallery-container{
+        width:100%;
+    }
+}
+
+/* DESKTOP AND UP (All Desktop) */
+@media only screen and (min-width: $desktop-min){
+    #accordian .accordian-slide{
+        border-left:10px solid $secondary-color;
+    }
+    
+    /* Form styles */
+    form input {
+        width: 57%;
+        padding: 1%;
+    }
+    
+    form input[type='search'] {
+        width:59%;
+    }
+}
+
+

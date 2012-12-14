@@ -13,11 +13,7 @@
 .col {
   display: block;
   float: left;
-  margin: 0 $gutter-width 0 0;
-}
-
-.end {
-  margin: 0;
+  margin:0;
 }
 
 .row {
@@ -26,10 +22,18 @@
   width: 100%;
 }
 
-// Generate grid
-@for $i from 1 through $cols {
-  $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
-  .grid-#{$i} {
-    width: $new-width;
-  }
+/* Grid */
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12{
+    width:100%;
 }

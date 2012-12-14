@@ -83,40 +83,35 @@ function mobileNavToggle(){
     
     $('.mobile-nav').toggleClass('active');
     
-    if (supports('transform')){
-        $('#main-nav').toggleClass('open');
-        $('#site-wrapper').toggleClass('open');
-        $('#main').toggleClass('open');
+    // CSS METHOD FIRST
+    if (supports('transition')){
+        $('#site-wrapper').toggleClass('css-nav-open');
+        return;
     }
 
+    // JS METHOD
     var speed = 500;
-
     if ($('.mobile-nav').hasClass('active')){
-        if (!supports('transform')){
-            $('#main-nav').stop().animate({
-                left: '0' 
-            }, speed);
-            $('#main').stop().animate({
-                left: '70%'
-            }, speed, function(){
-                $('#site-wrapper').css('overflow', 'hidden');
-            });
-        }else{
+       
+        $('#main-nav').stop().animate({
+            left: '0' 
+        }, speed);
+        $('#main').stop().animate({
+            left: '70%'
+        }, speed, function(){
             $('#site-wrapper').css('overflow', 'hidden');
-        }
+        });
+
     }else{
-        if (!supports('transform')){
-            $('#main-nav').stop().animate({
-                left: '-100%' 
-            }, speed);
-            $('#main').stop().animate({
-                left: '0'
-            }, speed, function(){
-                $('#site-wrapper').css('overflow', 'auto');
-            });
-        }else{
+        
+        $('#main-nav').stop().animate({
+            left: '-100%' 
+        }, speed);
+        $('#main').stop().animate({
+            left: '0'
+        }, speed, function(){
             $('#site-wrapper').css('overflow', 'auto');
-        }
+        });
     }
 }
 

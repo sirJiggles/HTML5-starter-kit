@@ -19,6 +19,10 @@ body{
     height: 100%;
     margin-bottom:-$footer-height+px;
     position:relative;
+    overflow:auto;
+}
+#site-wrapper.css-nav-open{
+    overflow:hidden;
 }
 
 #content{
@@ -27,11 +31,13 @@ body{
 }
 
 #main{
-    padding:95px 0 0 0;
+    padding:65px 0 0 0;
     @include block-left;
     width:100%;
     position:relative;
     width:100%;
+    @include transition(left, 0.3s, linear);
+    @include translate(0%); 
 }
 
 /* Accordian styles */ 
@@ -59,7 +65,7 @@ body{
     width: 94%;
     position:relative;
     z-index:1;
-    border-left:10px solid $secondary-color;
+    border-left: 1px solid $secondary-color;
 }
 
 #accordian a.accordian-link span{

@@ -27,7 +27,7 @@ form fieldset {
 }
 
 form label {
-    width: 40%;
+    width: 100%;
     float: left;
     padding: 0 0 2% 0;
     line-height: 1.8em;
@@ -46,14 +46,16 @@ form legend {
 }
 
 form input {
-    width: 57%;
+    width: 89%;
+    padding:4%;
     margin: 0 0 2% 0;
-    padding: 1%;
 }
 
 form input[type='search'] {
-    width:59%;
+    width:98%;
 }
+
+
 
 form input[type='submit']{
     background-color: $secondary-color;
@@ -73,7 +75,7 @@ form input[type='submit']:active{
 /* New input types */
 progress,
 meter {
-  width: 59%;
+  width: 89%;
   margin: 0 0 4% 0;
   display: block;
   float: left;

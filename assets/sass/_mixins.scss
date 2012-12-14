@@ -1,8 +1,3 @@
-@mixin rounded($radius: 5) {
-    border-radius: $radius+px;
-    -webkit-border-radius: $radius+px;
-    -moz-border-radius: $radius+px;
-}
 
 @mixin em-font($px:12){
     font-size:(1 / $base-font) * $px + em;
@@ -17,12 +12,22 @@
     float:left;
 }
     
+@mixin rounded($radius: 5) {
+    border-radius: $radius+px;
+    -webkit-border-radius: $radius+px;
+    -moz-border-radius: $radius+px;
+}
 
 @mixin drop-shadow($left-offset:0, $top-offset:5px, $blur:5px, $height:0, $color:#222){
     -moz-box-shadow: $left-offset $top-offset $blur $height $color;
     -webkit-box-shadow: $left-offset $top-offset $blur $height $color;
     box-shadow: $left-offset $top-offset $blur $height $color;
-    
+}
+
+@mixin no-drop-shadow(){
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 @mixin text-shadow($horizontal:1px, $vertical:1px, $blur:1px, $color:#222){
