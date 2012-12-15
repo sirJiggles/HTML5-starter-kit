@@ -11,7 +11,7 @@
         
         <div id="accordian">
             
-            <a href="#" class="accordian-link" title="Article"><span data-icon="&#59236;"></span><h3>Article</h3></a>
+            <a href="#" class="accordian-link" title="Article"><span class="icon">&#59236;</span><h3>Article</h3></a>
             <div class="accordian-slide">
                 <p>Should be stand alone and portable to any page. Examples of use:</p>
                 <ul>
@@ -31,7 +31,7 @@
             </div>
 
 
-            <a href="#" class="accordian-link" title="Aside"><span data-icon="&#59236;"></span><h3>Aside</h3></a>
+            <a href="#" class="accordian-link" title="Aside"><span class="icon">&#59236;</span><h3>Aside</h3></a>
             <div class="accordian-slide">
                 <p>Content "to the side" of some other related content.</p>
                 <pre class="brush: js">
@@ -50,7 +50,7 @@
             </div>
 
 
-            <a href="#" class="accordian-link" title="Audio"><span data-icon="&#59236;"></span><h3>Audio</h3></a>
+            <a href="#" class="accordian-link" title="Audio"><span class="icon">&#59236;</span><h3>Audio</h3></a>
             <div class="accordian-slide">
                 <p>The audio tag enables you to embed audio into the page.</p>
                 <pre class="brush: js">
@@ -70,7 +70,7 @@
                 </ul>
             </div>
                 
-            <a href="#" class="accordian-link" title="Canvas"><span data-icon="&#59236;"></span><h3>Canvas</h3></a>
+            <a href="#" class="accordian-link" title="Canvas"><span class="icon">&#59236;</span><h3>Canvas</h3></a>
             <div class="accordian-slide">
                 <p>Embed canvas in a page.</p>
                 <pre class="brush: js">
@@ -83,7 +83,7 @@
                
             </div>
 
-            <a href="#" class="accordian-link" title="Embed"><span data-icon="&#59236;"></span><h3>Embed</h3></a>
+            <a href="#" class="accordian-link" title="Embed"><span class="icon">&#59236;</span><h3>Embed</h3></a>
             <div class="accordian-slide">
                 <p>Embed flash video into the page.</p>
                 <pre class="brush: js">
@@ -98,7 +98,7 @@
                 </ul>
             </div>
             
-            <a href="#" class="accordian-link" title="Fig Caption"><span data-icon="&#59236;"></span><h3>Fig Caption</h3></a>
+            <a href="#" class="accordian-link" title="Fig Caption"><span class="icon">&#59236;</span><h3>Fig Caption</h3></a>
             <div class="accordian-slide">
                 <p>Used in conjunction with the figure tag to state the text that supports the figure.</p> 
                 <pre class="brush: js">
@@ -112,7 +112,7 @@
                 
             </div>
             
-            <a href="#" class="accordian-link" title="Figure"><span data-icon="&#59236;"></span><h3>Figure</h3></a>
+            <a href="#" class="accordian-link" title="Figure"><span class="icon">&#59236;</span><h3>Figure</h3></a>
             <div class="accordian-slide">
                 <p>State an element as a figure in the document, an example of its use would be to wrap around a photo, diagram or illustration.</p>
                 <p>This tag will usually be used in conjunction with the figcaption tag (previous item).</p>
@@ -123,7 +123,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="Footer"><span data-icon="&#59236;"></span><h3>Footer</h3></a>
+            <a href="#" class="accordian-link" title="Footer"><span class="icon">&#59236;</span><h3>Footer</h3></a>
             <div class="accordian-slide">
                 <p>The footer element states a section of the current context that is a footer. By this I mean you can have more than one!
                     You will have one for the main document (page) but you may have a section tag for some article details which may have another
@@ -149,7 +149,7 @@
                 
             </div>
             
-            <a href="#" class="accordian-link" title="Header"><span data-icon="&#59236;"></span><h3>Header</h3></a>
+            <a href="#" class="accordian-link" title="Header"><span class="icon">&#59236;</span><h3>Header</h3></a>
             <div class="accordian-slide">
                 <p>The header element as with the footer can appear multiple times in the document dependant on the context of the content.
                     This tag defines a header to a section</p>
@@ -176,7 +176,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="hgroup"><span data-icon="&#59236;"></span><h3>Hgroup</h3></a>
+            <a href="#" class="accordian-link" title="hgroup"><span class="icon">&#59236;</span><h3>Hgroup</h3></a>
             <div class="accordian-slide">
                 <p>The hgroup tag is for a group of headers, for example a title with a strap-line.</p>
                 <pre class="brush: js">
@@ -187,7 +187,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="Mark"><span data-icon="&#59236;"></span><h3>Mark</h3></a>
+            <a href="#" class="accordian-link" title="Mark"><span class="icon">&#59236;</span><h3>Mark</h3></a>
             <div class="accordian-slide">
                 <p>State that the text in this tag is highlighted or should be 'Marked'.</p>
                 <pre class="brush: js">
@@ -195,7 +195,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="Nav"><span data-icon="&#59236;"></span><h3>Nav</h3></a>
+            <a href="#" class="accordian-link" title="Nav"><span class="icon">&#59236;</span><h3>Nav</h3></a>
             <div class="accordian-slide">
                 <p>State that the following is navigation, this does not just apply to main nav it can be used for all 'navigation'.</p>
                 <pre class="brush: js">
@@ -208,7 +208,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="Section"><span data-icon="&#59236;"></span><h3>Section</h3></a>
+            <a href="#" class="accordian-link" title="Section"><span class="icon">&#59236;</span><h3>Section</h3></a>
             <div class="accordian-slide">
                 <p>Section tag, this is one of those tags that people will no doubt give different versions of how it should be used :S
                     In practice and what seems to make the most sense to me is to us the section tag as a wrapper of a section of content
@@ -252,7 +252,7 @@
                 </pre>
             </div>
             
-            <a href="#" class="accordian-link" title="Source"><span data-icon="&#59236;"></span><h3>Source</h3></a>
+            <a href="#" class="accordian-link" title="Source"><span class="icon">&#59236;</span><h3>Source</h3></a>
             <div class="accordian-slide">
                 <p>The source tag is usually used inside an audio and a video tag, it is used to define the source to
                     a file, you can also define the type of file in the source tag. The browser will try to load the source files from top to
@@ -264,7 +264,7 @@
             </div>
             
             
-            <a href="#" class="accordian-link" title="Time"><span data-icon="&#59236;"></span><h3>Time</h3></a>
+            <a href="#" class="accordian-link" title="Time"><span class="icon">&#59236;</span><h3>Time</h3></a>
             <div class="accordian-slide">
                 <p>This tag is used to define a time, shockingly. This tag supports some new attributes datetime and pubdate pubdate's future
                     is undecided at the moment but it stands for publish date. The format for the datetime attribute is YYYY-MM-DDThh:mm:ssTZD</p>
@@ -285,7 +285,7 @@
             </div>
             
             
-            <a href="#" class="accordian-link" title="Video"><span data-icon="&#59236;"></span><h3>Video</h3></a>
+            <a href="#" class="accordian-link" title="Video"><span class="icon">&#59236;</span><h3>Video</h3></a>
             <div class="accordian-slide">
                 <p>The video tag is used for embedding video content into a site. There is a great article on using the video tag here:
                     <a href="http://camendesign.co.uk/code/video_for_everybody" title="Click here to view examples of the video tag">Video tag examples</a>

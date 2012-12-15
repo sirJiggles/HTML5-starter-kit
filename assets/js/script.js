@@ -109,7 +109,7 @@ function mobileNavToggle(){
         }, speed);
         $('#main').stop().animate({
             left: '0'
-        }, speed, function(){
+        }, speed, function(){  
             $('#site-wrapper').css('overflow', 'auto');
         });
     }

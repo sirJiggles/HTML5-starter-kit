@@ -3,107 +3,42 @@
 Styles should be mobile first, this means mobile styles will be done by default
 and anything else will be added (enhansed) in this sheet
 
+DEVICES
+
+used list of top selling (wikkipedia) for last 2 years as most people have 2 year contract's
+
+MOBILE PHONES
+
+DEVICE                  | WIDTH     | HEIGHT    | PPI   | YEAR      | OS                |
+HTC Desire HD           | 480       | 800       | 217   | 2010      | Android           |
+IPhone 4/4s             | 640       | 960       | 326   | 2010/11   | iOS               |
+Galaxy S II             | 480       | 800       | 218   | 2011      | Jellybean (A)     |
+Galaxy Y                | 240       | 320       | 133   | 2011      | Gingerbeard (A)   |
+HTC Thunderbolt         | 480       | 800       | 215   | 2011      | Gingerbeard (A)   |
+HTC EVO 4G              | 480       | 800       | 217   | 2011      | Android           |
+Motorola Droid Bionic   | 540       | 960       | 256   | 2011      | Android 4.0 (Ice) |
+Samsung Infuse          | 480       | 800       | 207   | 2011      | Android 2.3.6     |
+ZTE Blade               | 480       | 800       | 267   | 2011      | Android           |
+IPhone 5                | 640       | 1136      | 326   | 2012      | iOS               |
+Nokia Lumia             | 768       | 1280      | 332   | 2012      | Windows           |
+Samsung Galaxy S3       | 780       | 1280      | 306   | 2012      | Android 4.0 (Ice) |
+
+TABLETS
+
+DEVICE                  | WIDTH     | HEIGHT    | PPI   | YEAR      | OS                |
+Ipad mini               | 1024      | 768       | 163   | 2012      | iOS               |
+Ipad 2                  | 1024      | 768       | 132   | 2011      | iOS               |
+IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS               |
+
 */
 
 @import "_mixins.scss";
 @import "_global-vars.scss";
 
 
-/* MOBILE LANDSCAPE AND DOWN */
-@media only screen and (max-width: $mobile) {
+/* EVERYTHING ABOVE MOBILE AND UNDER THE MOBILE DPI */
+@media only screen and (min-width: $mobile-port){
     
-    // SHOULD NOT NEED ANYTHING HERE IF MOBILE FIRST ;D
-   
-}
-
-/* MOBILE LANDSCAPE TO TABLET PORTRAIT */
-@media only screen and (min-width: $mobile) and (max-width: $tablet){
-
-    #accordian .accordian-slide{
-        border-left: 5px solid $secondary-color;
-    }
-    
-    /* Forms */
-    form input{
-        width: 94%;
-        padding:2%
-    }
-    form input[type='search'] {
-        width:100%;
-    }
-    form label{
-        padding:0;
-        width:94%
-    }
-    
-    progress,
-    meter {
-        width: 94%;
-    }
-}
-
-/* TABLET PORTRAIT TO DESKTOP */
-@media only screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
-    
-
-}
-
-/* DESKTOP - LARGE */
-@media only screen and (min-width: $large-screen) {
-    
-}
-
-
-/* 
-   THESE NEXT SET OF MEDIA QUERIES ARE CUSTOM BUT USUALLY REQUIRED FOR THINGS LIKE
-   THE GRID, THEY ARE THINGS LIKE 'ANYTHING BIGGER THAN TABLET ETC' 
-*/
-
-
-/* EVERYTHING ABOVE TABLET */
-@media only screen and (min-width: $tablet) {
-    // Generate grid
-    @for $i from 1 through $cols {
-        $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
-        .grid-#{$i} {
-            width: $new-width;
-        }
-    }
-    .col{
-        margin: 0 $gutter-width 0 0;
-    }
-    
-    .end {
-        margin: 0;
-    }
-    
-    h1{
-        text-indent:0px;
-    }
-    
-    /* Form styles */
-    progress,
-    meter {
-        width: 59%;
-        margin: 0 0 4% 0;
-    }
-    
-    form label{
-        width:40%;
-    }
-
-    
-}
-
-/* EVERYTHING ABOVE MOBILE */
-@media only screen and (min-width: $mobile) {
-    #main{
-        padding:95px 0 0 0;
-    }
-    
-    #header{
-        height:75px;
-    }
     #main-nav{
         display: block;
         position: fixed;
@@ -132,6 +67,7 @@ and anything else will be added (enhansed) in this sheet
     #main-nav ul{
         float: right;
         width: auto;
+        border-left:1px solid #444;
     }
     
     #main-nav ul li{
@@ -139,42 +75,71 @@ and anything else will be added (enhansed) in this sheet
         width:75px;
     }
     
-    #main-nav ul li.first{
-        border-left:1px solid #444;
-    }
-    
     .mobile-nav{
         display:none;
-    }
-    
-    #main-nav ul li a{
-        margin:0;
-        padding:0;
-        width:75px;
-        height:75px;
     }
     
     #main-nav ul li a.active{
         background:none;
     }
     
+    #main-nav ul li span{
+        margin:-12px 0 6px 34%;
+    }
+    
     
 }
 
-/* EVERYTHING FROM TABLET DOWN */
-@media only screen and (max-width: $tablet) {
-    #gallery-container{
-        width:100%;
-    }
-}
 
-/* DESKTOP AND UP (All Desktop) */
-@media only screen and (min-width: $desktop-min){
-    #accordian .accordian-slide{
-        border-left:10px solid $secondary-color;
+/* EVERYTHING ABOVE TABLET PORTRAIT */
+@media only screen and (min-width: $tablet-port) {
+    // Generate grid
+    @for $i from 1 through $cols {
+        $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
+        .grid-#{$i} {
+            width: $new-width;
+        }
+    }
+    .col{
+        margin: 0 $gutter-width 0 0;
+    }
+    
+    .end {
+        margin: 0;
+    }
+    
+    h1{
+        text-indent:0px;
+    }
+    
+    #header{
+        height:75px;
+    }
+    
+    #main{
+        padding:95px 0 0 0;
+    }
+    
+    /* NAV */
+    
+    #main-nav ul li a{
+        margin:0;
+        padding:0;
+        height:75px;
+        text-align:center;
     }
     
     /* Form styles */
+    progress,
+    meter {
+        width: 59%;
+        margin: 0 0 4% 0;
+    }
+    
+    form label{
+        width:40%;
+    }
+    
     form input {
         width: 57%;
         padding: 1%;
@@ -183,6 +148,60 @@ and anything else will be added (enhansed) in this sheet
     form input[type='search'] {
         width:59%;
     }
+    
+    #accordian .accordian-slide{
+        border-left:10px solid $secondary-color;
+    }
+    
+}
+
+/* EVERYTHING FROM TABLET DOWN */
+@media only screen and (max-width: $tablet-port) {
+    #gallery-container{
+        width:100%;
+    }
 }
 
 
+/* TABLET PORTRAIT - LANDSCAPE */
+@media only screen and (min-width: $mobile-port) and (max-width: $tablet-port){
+
+    #accordian .accordian-slide{
+        border-left: 5px solid $secondary-color;
+    }
+    
+    /* Forms */
+    form input{
+        width: 94%;
+        padding:2%
+    }
+    form input[type='search'] {
+        width:100%;
+    }
+    form label{
+        padding:0;
+        width:94%
+    }
+    
+    progress,
+    meter {
+        width: 94%;
+    }
+    
+    #main-nav ul{
+        width:100%;
+    }
+    
+    #main-nav ul li{
+        width:24.5%;
+    }
+    
+    #main-nav ul li a{
+        padding:10px 0 0 0;
+    }
+    
+    #main-nav ul li span{
+        margin:-29px 0 0 10px;
+    }
+    
+}

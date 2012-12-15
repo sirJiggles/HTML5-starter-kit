@@ -75,15 +75,6 @@ h1 {
     left:79%;
 }
 
-#main-nav ul li a{
-    margin: 0 0 5px 0;
-    padding: 10px 0 10px 0;
-    @inclue em-font(18);
-    text-align:left;
-    font-size:1.0em;
-
-}
-
 #main-nav ul{
     margin: 0;
     padding:0;
@@ -104,11 +95,11 @@ h1 {
     float: left;
     outline: none;
     text-decoration: none;
-    @include em-font(12);
+    @include em-font(16);
     font-weight:400;
-    text-align:center;
     width:100%;
     margin:0 0 10px 0;
+    padding:10px 0 10px 0;
 }
 
 #main-nav ul li a.active{

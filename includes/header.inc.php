@@ -61,7 +61,7 @@
             <nav id="main-nav" role="navigation" class="col grid-12 end">
                 <div class="center-content">
                     <ul>
-                        <li class="first"><a href="index.php" title="index" class="active"><span class="icon">&#128240;</span>Forms</a></li>
+                        <li><a href="index.php" title="index" class="active"><span class="icon">&#128240;</span>Forms</a></li>
                         <li><a href="tags.php" title="tags"><span class="icon">&#59148;</span>Tags</a></li>
                         <li><a href="grid.php" title="grid"><span class="icon">&#9871;</span>Grid</a></li>
                         <li><a href="gallery.php" title="gallery"><span class="icon">&#128247;</span>Gallery</a></li>
