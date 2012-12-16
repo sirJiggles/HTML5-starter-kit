@@ -90,9 +90,7 @@ table {
 
 span.icon {
   font-family: 'entypo';
-  font-size: 3.2em;
-  line-height: 1;
-  margin-top: -29px; }
+  line-height: 1; }
 
 body {
   /* base font size */
@@ -233,7 +231,9 @@ meter {
 
 .mobile-nav span {
   display: block;
-  float: left; }
+  float: left;
+  font-size: 3.0em;
+  margin: -26px 0 0 0; }
 
 h1 {
   text-indent: -99999px;
@@ -264,7 +264,6 @@ h1 {
   padding: 0;
   width: 100%; }
 
-/* CSS 3 TRANSLATIONS (open FB style nav) */
 #site-wrapper.css-nav-open #main-nav {
   left: 0; }
 
@@ -307,7 +306,8 @@ h1 {
   float: left;
   width: 40px;
   text-align: left;
-  margin: -29px 0 0 12%; }
+  margin: -29px 0 0 12%;
+  font-size: 3.0em; }
 
 .push {
   height: 150px;
@@ -590,8 +590,8 @@ Samsung Galaxy S3       | 780       | 1280      | 306   | 2012      | Android 4.
 TABLETS
 
 DEVICE                  | WIDTH     | HEIGHT    | PPI   | YEAR      | OS                |
-Ipad mini               | 1024      | 768       | 163   | 2012      | iOS               |
 Ipad 2                  | 1024      | 768       | 132   | 2011      | iOS               |
+Ipad mini               | 1024      | 768       | 163   | 2012      | iOS               |
 IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS               |
 
 */

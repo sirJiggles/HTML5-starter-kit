@@ -38,6 +38,8 @@
 
 .mobile-nav span{
     @include block-left();
+    font-size: 3.0em;
+    margin: -26px 0 0 0;
 }
 
 h1 {
@@ -66,7 +68,6 @@ h1 {
     width:100%;
 }
 
-/* CSS 3 TRANSLATIONS (open FB style nav) */
 #site-wrapper.css-nav-open #main-nav{
     left:0;
 }
@@ -116,4 +117,5 @@ h1 {
     width: 40px;
     text-align: left;
     margin: -29px 0 0 12%;
+    font-size:3.0em;
 }

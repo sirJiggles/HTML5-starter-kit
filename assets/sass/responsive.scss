@@ -26,8 +26,8 @@ Samsung Galaxy S3       | 780       | 1280      | 306   | 2012      | Android 4.
 TABLETS
 
 DEVICE                  | WIDTH     | HEIGHT    | PPI   | YEAR      | OS                |
-Ipad mini               | 1024      | 768       | 163   | 2012      | iOS               |
 Ipad 2                  | 1024      | 768       | 132   | 2011      | iOS               |
+Ipad mini               | 1024      | 768       | 163   | 2012      | iOS               |
 IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS               |
 
 */
@@ -38,6 +38,7 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 
 /* EVERYTHING ABOVE MOBILE AND UNDER THE MOBILE DPI */
 @media only screen and (min-width: $mobile-port){
+//@media only screen and (min-width: $mobile-port) and (max-resolution: 200dpi){
     
     #main-nav{
         display: block;
