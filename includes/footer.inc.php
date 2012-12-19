@@ -25,7 +25,9 @@
         
         
         <!-- Load all JS last -->
-        <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/jquery-1.8.2.min.js"><\/script>')</script>
+       
         <script type="text/javascript" src="librarys/syntax-highlighter/shCore.js"></script>
         <script type="text/javascript" src="librarys/syntax-highlighter/shBrushJScript.js"></script>
         <script type="text/javascript" src="assets/js/garethGallery.js"></script>

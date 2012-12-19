@@ -34,6 +34,8 @@ var supports = (function(prop) {
 /* Document ready function */
 $(document).ready(function() {
     
+    $('html').removeClass('no-js');
+
     // init syntax highlighter
     SyntaxHighlighter.all();
     

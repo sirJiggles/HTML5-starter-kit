@@ -36,12 +36,11 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 @import "_global-vars.scss";
 
 
-/* EVERYTHING ABOVE MOBILE AND UNDER THE MOBILE DPI */
-@media only screen and (min-width: $mobile-port){
-//@media only screen and (min-width: $mobile-port) and (max-resolution: 200dpi){
-    
+/* MOBILE LANDSCAPE UP */
+@media only screen and (min-width: $mobile){
+
+    /* MAIN NAVIGATION */
     #main-nav{
-        display: block;
         position: fixed;
         z-index: 4;
         width: 96%;
@@ -64,20 +63,23 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
         padding: 0 5% 0 5%;
     }
     
-    /* MAIN NAVIGATION */
     #main-nav ul{
         float: right;
-        width: auto;
         border-left:1px solid #444;
+        width:100%;
     }
     
     #main-nav ul li{
         border-right:1px solid #444;
-        width:75px;
+        width:24.5%;
     }
     
     .mobile-nav{
         display:none;
+    }
+
+    #main-nav ul li a{
+        padding:10px 0 0 0;
     }
     
     #main-nav ul li a.active{
@@ -85,15 +87,33 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     }
     
     #main-nav ul li span{
-        margin:-12px 0 6px 34%;
+        float:left;
+        margin:10px 5px 10px 5px;
+        width:30px;
+    }
+
+    #accordian .accordian-slide{
+        border-left: 5px solid $secondary-color;
+    }
+    
+    form input{
+        width: 94%;
+        padding:2%
+    }
+    form input[type='search'] {
+        width:100%;
+    }
+    form label{
+        padding:0;
+        width:94%
     }
     
     
 }
 
 
-/* EVERYTHING ABOVE TABLET PORTRAIT */
-@media only screen and (min-width: $tablet-port) {
+/* TABLET UP */
+@media only screen and (min-width: $tablet) {
     // Generate grid
     @for $i from 1 through $cols {
         $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
@@ -107,27 +127,6 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     
     .end {
         margin: 0;
-    }
-    
-    h1{
-        text-indent:0px;
-    }
-    
-    #header{
-        height:75px;
-    }
-    
-    #main{
-        padding:95px 0 0 0;
-    }
-    
-    /* NAV */
-    
-    #main-nav ul li a{
-        margin:0;
-        padding:0;
-        height:75px;
-        text-align:center;
     }
     
     /* Form styles */
@@ -156,53 +155,46 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     
 }
 
-/* EVERYTHING FROM TABLET DOWN */
-@media only screen and (max-width: $tablet-port) {
+/* DEKSTOP UP */
+@media only screen and ( min-width: $desktop ){
     #gallery-container{
-        width:100%;
+        width:60%;
     }
-}
+
+    h1{
+        text-indent:0px;
+    }
 
 
-/* TABLET PORTRAIT - LANDSCAPE */
-@media only screen and (min-width: $mobile-port) and (max-width: $tablet-port){
+    #header{
+        height:75px;
+    }
+    
+    #main{
+        padding:95px 0 0 0;
+    }
+    
+    /* NAV */
 
-    #accordian .accordian-slide{
-        border-left: 5px solid $secondary-color;
-    }
-    
-    /* Forms */
-    form input{
-        width: 94%;
-        padding:2%
-    }
-    form input[type='search'] {
-        width:100%;
-    }
-    form label{
-        padding:0;
-        width:94%
-    }
-    
-    progress,
-    meter {
-        width: 94%;
-    }
-    
     #main-nav ul{
-        width:100%;
-    }
-    
-    #main-nav ul li{
-        width:24.5%;
+        width:auto;
     }
     
     #main-nav ul li a{
+        margin:0;
+        padding:0;
+        height:75px;
+        text-align:center;
+    }
+
+    #main-nav ul li span{
+        text-align: center;
+        width:100%;
+        margin:10px 0 10px 0;
+        height:16px;
         padding:10px 0 0 0;
     }
     
-    #main-nav ul li span{
-        margin:-29px 0 0 10px;
-    }
     
+
 }

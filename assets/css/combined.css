@@ -90,7 +90,8 @@ table {
 
 span.icon {
   font-family: 'entypo';
-  line-height: 1; }
+  line-height: 0;
+  vertical-align: -6px; }
 
 body {
   /* base font size */
@@ -214,6 +215,14 @@ meter {
 .header-wrapper {
   position: relative; }
 
+h1 {
+  text-indent: -99999px;
+  float: left;
+  margin: 18px 0 0 0;
+  text-shadow: 2px 2px 6px black;
+  filter: dropshadow(color=black, offx=1, offy=1); }
+
+/* MAIN NAVIGATION */
 .mobile-nav {
   float: left;
   border: 1px solid #3c3c3c;
@@ -222,7 +231,8 @@ meter {
   -moz-border-radius: 5px;
   color: white;
   padding: 5px;
-  margin: 5px 0 5px 0; }
+  margin: 5px 0 5px 0;
+  text-decoration: none; }
 
 .mobile-nav.active,
 .mobile-nav:hover {
@@ -230,17 +240,8 @@ meter {
   border: 1px solid #222222; }
 
 .mobile-nav span {
-  display: block;
-  float: left;
   font-size: 3.0em;
-  margin: -26px 0 0 0; }
-
-h1 {
-  text-indent: -99999px;
-  float: left;
-  margin: 18px 0 0 0;
-  text-shadow: 2px 2px 6px black;
-  filter: dropshadow(color=black, offx=1, offy=1); }
+  margin: 0; }
 
 #main-nav {
   position: absolute;
@@ -289,11 +290,9 @@ h1 {
   float: left;
   outline: none;
   text-decoration: none;
-  font-size: 1em;
-  font-weight: 400;
-  width: 100%;
+  width: 90%;
   margin: 0 0 10px 0;
-  padding: 10px 0 10px 0; }
+  padding: 10px 0 10px 10%; }
 
 #main-nav ul li a.active {
   background-color: #3c3c3c; }
@@ -303,10 +302,10 @@ h1 {
   color: white; }
 
 #main-nav ul li span {
-  float: left;
+  float: right;
   width: 40px;
-  text-align: left;
-  margin: -29px 0 0 12%;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
   font-size: 3.0em; }
 
 .push {
@@ -424,7 +423,7 @@ body {
 /* Gallery */
 #gallery-container {
   margin: 0 auto;
-  width: 60%; }
+  width: 100%; }
 
 #gallery {
   -moz-box-shadow: 0px 0px 15px 1px #222222;
@@ -505,7 +504,7 @@ body {
 #thumbnails-wrapper li.active {
   filter: alpha(opacity=50);
   opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$amount)";
   background-color: #15a2ed; }
 
 #thumbnails {
@@ -595,10 +594,10 @@ Ipad mini               | 1024      | 768       | 163   | 2012      | iOS       
 IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS               |
 
 */
-/* EVERYTHING ABOVE MOBILE AND UNDER THE MOBILE DPI */
+/* MOBILE LANDSCAPE UP */
 @media only screen and (min-width: 480px) {
+  /* MAIN NAVIGATION */
   #main-nav {
-    display: block;
     position: fixed;
     z-index: 4;
     width: 96%;
@@ -620,26 +619,44 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     width: 90%;
     padding: 0 5% 0 5%; }
 
-  /* MAIN NAVIGATION */
   #main-nav ul {
     float: right;
-    width: auto;
-    border-left: 1px solid #444; }
+    border-left: 1px solid #444;
+    width: 100%; }
 
   #main-nav ul li {
     border-right: 1px solid #444;
-    width: 75px; }
+    width: 24.5%; }
 
   .mobile-nav {
     display: none; }
+
+  #main-nav ul li a {
+    padding: 10px 0 0 0; }
 
   #main-nav ul li a.active {
     background: none; }
 
   #main-nav ul li span {
-    margin: -12px 0 6px 34%; } }
-/* EVERYTHING ABOVE TABLET PORTRAIT */
-@media only screen and (min-width: 786px) {
+    float: left;
+    margin: 10px 5px 10px 5px;
+    width: 30px; }
+
+  #accordian .accordian-slide {
+    border-left: 5px solid #15a2ed; }
+
+  form input {
+    width: 94%;
+    padding: 2%; }
+
+  form input[type='search'] {
+    width: 100%; }
+
+  form label {
+    padding: 0;
+    width: 94%; } }
+/* TABLET UP */
+@media only screen and (min-width: 678px) {
   .grid-1 {
     width: 5.78704%; }
 
@@ -682,22 +699,6 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
   .end {
     margin: 0; }
 
-  h1 {
-    text-indent: 0px; }
-
-  #header {
-    height: 75px; }
-
-  #main {
-    padding: 95px 0 0 0; }
-
-  /* NAV */
-  #main-nav ul li a {
-    margin: 0;
-    padding: 0;
-    height: 75px;
-    text-align: center; }
-
   /* Form styles */
   progress,
   meter {
@@ -716,39 +717,33 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 
   #accordian .accordian-slide {
     border-left: 10px solid #15a2ed; } }
-/* EVERYTHING FROM TABLET DOWN */
-@media only screen and (max-width: 786px) {
+/* DEKSTOP UP */
+@media only screen and (min-width: 940px) {
   #gallery-container {
-    width: 100%; } }
-/* TABLET PORTRAIT - LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 786px) {
-  #accordian .accordian-slide {
-    border-left: 5px solid #15a2ed; }
+    width: 60%; }
 
-  /* Forms */
-  form input {
-    width: 94%;
-    padding: 2%; }
+  h1 {
+    text-indent: 0px; }
 
-  form input[type='search'] {
-    width: 100%; }
+  #header {
+    height: 75px; }
 
-  form label {
-    padding: 0;
-    width: 94%; }
+  #main {
+    padding: 95px 0 0 0; }
 
-  progress,
-  meter {
-    width: 94%; }
-
+  /* NAV */
   #main-nav ul {
-    width: 100%; }
-
-  #main-nav ul li {
-    width: 24.5%; }
+    width: auto; }
 
   #main-nav ul li a {
-    padding: 10px 0 0 0; }
+    margin: 0;
+    padding: 0;
+    height: 75px;
+    text-align: center; }
 
   #main-nav ul li span {
-    margin: -29px 0 0 10px; } }
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    height: 16px;
+    padding: 10px 0 0 0; } }

@@ -96,13 +96,13 @@ body{
 
 #gallery-container{
     margin:0 auto;
-    width:60%;
+    width:100%;
 }
 
 #gallery{
     @include drop-shadow(0px, 0px, 15px, 1px, $base-color);
     width:600px;
-    @include block-left;
+    @include block-left();
     overflow:hidden;
     position:relative;
     width:100%;
@@ -141,7 +141,7 @@ body{
 }
 
 #gallery ul li h3{
-    @include block-left;
+    @include block-left();
     padding:0;
     margin:20px 10% 20px 10%;
     width:80%;
@@ -208,7 +208,7 @@ body{
 
 #progress-bar{
     width:100%;
-    @include block-left;
+    @include block-left();
     
 }
 

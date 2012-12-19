@@ -9,40 +9,40 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
-	<title>Gareth Fuller | HTML5 Base</title>
-        
+
+    	<title>Gareth Fuller | HTML5 Base</title>
+            
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="assets/js/html5-3.6-respond-1.1.0.min.js"></script>
         <![endif]-->
         
-	
-	<!-- META -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<meta name="description" content="" />
+    	<meta name="author" content="" />
         <meta name="keywords" content="" />
 	
         <!-- Humans file -->
-	<link rel="author" type="text/plain" href="/humans.txt" />
+        <link rel="author" type="text/plain" href="/humans.txt" />
 
-	<!-- Favicons -->
+        <!-- Favicons -->
         <link rel="shortcut icon" href="assets/favicons/16.ico" />
-	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/57.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/72.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/114.png" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/144.png" />
+    	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/favicons/57.png" />
+    	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/favicons/72.png" />
+    	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/favicons/114.png" />
+    	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/favicons/144.png" />
         
-	<!-- CSS -->
+    	<!-- CSS -->
         <link rel="stylesheet" href="assets/css/combined.css" media="screen" type="text/css" />
-	<link rel="stylesheet" href="assets/css/print.css" media="print" type="text/css"/>
+    	<link rel="stylesheet" href="assets/css/print.css" media="print" type="text/css"/>
         
         <!--[if lte IE 7]>
             <link rel="stylesheet" href="assets/css/grid-fixed.css" media="screen" type="text/css"/>
-            <link rel="stylesheet" href="assets/css/fontello-ie7.css">
         <![endif]-->
 
         <!-- Syntax highlighter -->
