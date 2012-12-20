@@ -1,7 +1,8 @@
 /* Responsive styles 
 
-Styles should be mobile first, this means mobile styles will be done by default
-and anything else will be added (enhansed) in this sheet
+Mobile first css,
+
+the mixins is where you want to put the styles, the mixins are both used here and in IE stylesheet 
 
 DEVICES
 
@@ -34,167 +35,27 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 
 @import "_mixins.scss";
 @import "_global-vars.scss";
+@import "_media_mixins.scss";
 
 
 /* MOBILE LANDSCAPE UP */
 @media only screen and (min-width: $mobile){
 
-    /* MAIN NAVIGATION */
-    #main-nav{
-        position: fixed;
-        z-index: 4;
-        width: 96%;
-        padding: 0 2% 0 2%;
-        left: 0;
-        background:none;
-        @include no-drop-shadow();
-        height:auto;
-        top:0;
-    }
-    
-    #site-wrapper.css-nav-open #main-nav,
-    #site-wrapper.css-nav-open #main{
-       left:0;
-    }
-    
-    #main-nav .center-content{
-        margin: 0 auto;
-        width: 90%;
-        padding: 0 5% 0 5%;
-    }
-    
-    #main-nav ul{
-        float: right;
-        border-left:1px solid #444;
-        width:100%;
-    }
-    
-    #main-nav ul li{
-        border-right:1px solid #444;
-        width:24.5%;
-    }
-    
-    .mobile-nav{
-        display:none;
-    }
+    @include mobile-land-styles();
 
-    #main-nav ul li a{
-        padding:10px 0 0 0;
-    }
-    
-    #main-nav ul li a.active{
-        background:none;
-    }
-    
-    #main-nav ul li span{
-        float:left;
-        margin:10px 5px 10px 5px;
-        width:30px;
-    }
-
-    #accordian .accordian-slide{
-        border-left: 5px solid $secondary-color;
-    }
-    
-    form input{
-        width: 94%;
-        padding:2%
-    }
-    form input[type='search'] {
-        width:100%;
-    }
-    form label{
-        padding:0;
-        width:94%
-    }
-    
-    
 }
-
 
 /* TABLET UP */
-@media only screen and (min-width: $tablet) {
-    // Generate grid
-    @for $i from 1 through $cols {
-        $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
-        .grid-#{$i} {
-            width: $new-width;
-        }
-    }
-    .col{
-        margin: 0 $gutter-width 0 0;
-    }
-    
-    .end {
-        margin: 0;
-    }
-    
-    /* Form styles */
-    progress,
-    meter {
-        width: 59%;
-        margin: 0 0 4% 0;
-    }
-    
-    form label{
-        width:40%;
-    }
-    
-    form input {
-        width: 57%;
-        padding: 1%;
-    }
-    
-    form input[type='search'] {
-        width:59%;
-    }
-    
-    #accordian .accordian-slide{
-        border-left:10px solid $secondary-color;
-    }
-    
-}
+@media only screen and (min-width: $tablet){
 
-/* DEKSTOP UP */
-@media only screen and ( min-width: $desktop ){
-    #gallery-container{
-        width:60%;
-    }
-
-    h1{
-        text-indent:0px;
-    }
-
-
-    #header{
-        height:75px;
-    }
-    
-    #main{
-        padding:95px 0 0 0;
-    }
-    
-    /* NAV */
-
-    #main-nav ul{
-        width:auto;
-    }
-    
-    #main-nav ul li a{
-        margin:0;
-        padding:0;
-        height:75px;
-        text-align:center;
-    }
-
-    #main-nav ul li span{
-        text-align: center;
-        width:100%;
-        margin:10px 0 10px 0;
-        height:16px;
-        padding:10px 0 0 0;
-    }
-    
-    
+    @include tablet-styles();
 
 }
+
+/* DESKTOP UP (THESE ARE IE8 AND UP) */
+@media only screen and (min-width: $desktop){
+
+    @include desktop-styles();
+
+}
+

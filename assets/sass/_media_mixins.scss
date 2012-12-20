@@ -1,0 +1,170 @@
+
+@mixin mobile-land-styles(){
+
+	.mobile-nav{
+        display:none;
+    }
+
+    #main-nav{
+        position: fixed;
+        z-index: 4;
+        width: 96%;
+        padding: 0 2% 0 2%;
+        left: 0;
+        background:none;
+        height:auto;
+        top:0;
+        @include no-drop-shadow();
+    }
+
+    #main-nav ul{
+        border-left:1px solid #444;
+    }
+
+    #main-nav .center-content{
+        margin:0 auto;
+        max-width: $site-width+px;
+        width: 90%;
+        padding: 0 5% 0 5%;
+    }
+
+    #main-nav ul li{
+        border-right:1px solid #444;
+        width:24.5%;
+    }
+
+    #main-nav ul li a{
+        margin:0;
+        padding:10px 0 0 0;
+        text-align:left;
+    }
+
+    #main-nav ul li a.active{
+        background:none;
+    }
+
+    #main-nav ul li span{
+        float:left;
+        margin:10px 0 10px 0;
+        height:12px;
+        padding:0;
+    }
+
+
+    #site-wrapper.css-nav-open #main-nav,
+    #site-wrapper.css-nav-open #main{
+       left:0;  
+    }
+
+    // ACCORDIAN
+    #accordian .accordian-slide{
+        border-left:3px solid $secondary-color;
+    }
+
+    // FORMS
+    form input {
+	    width: 96%;
+	    padding:2%;
+    }
+}
+
+@mixin tablet-styles(){
+
+	// Generate grid
+    @for $i from 1 through $cols {
+        $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
+        .grid-#{$i} {
+            width: $new-width;
+        }
+    }
+    .col{
+        margin: 0 $gutter-width 0 0;
+    }
+
+    .end {
+        margin: 0;
+    }
+
+    // HEADER
+    #header {
+        height:75px;
+    }
+
+    #main{
+        padding:95px 0 0 0;
+    }
+
+    // NAV AMENDS
+    #main-nav ul li a{
+        padding:28px 0 15px 15px
+    }
+
+    #main-nav ul li a span{
+        margin:10px 10px 10px 0;
+    }
+
+    // ACCORDIAN
+    #accordian .accordian-slide{
+        border-left:7px solid $secondary-color;
+    }
+
+    // FORMS
+    form input {
+	    width: 55%;
+	    padding:2%;
+    }
+
+    form label{
+    	width:40%;
+    }
+
+    form input[type='search'] {
+	    width:59%;
+	}
+
+	progress,
+	meter {
+	  width: 59%;
+  	}
+
+}
+
+@mixin desktop-styles(){
+
+	h1{
+        text-indent:0px;
+    }
+
+    #gallery-container{
+        width:60%;
+    }
+
+    #main-nav ul{
+        width:auto;
+    }
+
+    #main-nav ul li{
+        width:75px;
+    }
+
+    #main-nav ul li a {
+        padding: 15px 0 8px 0;
+        text-align: center;
+    }
+
+    #main-nav ul li a span{
+        padding:0 0 0 12px;
+    }
+
+    // ACCORIDIAN
+    #accordian .accordian-slide{
+        border-left:10px solid $secondary-color;
+    }
+
+    // FORMS
+    form input {
+	    width: 57%;
+	    padding:1%;
+    }
+
+}

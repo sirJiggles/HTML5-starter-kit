@@ -15,8 +15,7 @@ body{
 #site-wrapper{
     height:100%;
     min-height: 100%;
-    height: auto !important;
-    height: 100%;
+    height: auto;
     margin-bottom:-$footer-height+px;
     position:relative;
     overflow:auto;
@@ -24,6 +23,7 @@ body{
 #site-wrapper.css-nav-open{
     overflow:hidden;
 }
+
 
 #content{
     width:100%;
@@ -35,7 +35,6 @@ body{
     @include block-left;
     width:100%;
     position:relative;
-    width:100%;
     @include transition(left, 0.3s, linear);
     @include translate(0%); 
 }
@@ -51,7 +50,7 @@ body{
     @include block-left;
     margin: 0 0 1px 0;
     text-decoration:none;
-    @include transition();
+    @include transition(background-color, 0.3s, linear);
 }
 
 #accordian a.accordian-link:hover{
@@ -72,6 +71,7 @@ body{
     float:right;
     color:white;
     @include rotate(270);
+    margin:1% 0 0 0;
 }
 
 #accordian a.accordian-link h3{
@@ -80,7 +80,6 @@ body{
 }
 
 #accordian a.open{
-    @include drop-shadow(0, 13px, 15px, -10px);
     position:relative;
     z-index:2;
     margin:0;
@@ -100,7 +99,7 @@ body{
 }
 
 #gallery{
-    @include drop-shadow(0px, 0px, 15px, 1px, $base-color);
+    @include drop-shadow(0px, 0px, 15px, 1px, $primary-color);
     width:600px;
     @include block-left();
     overflow:hidden;

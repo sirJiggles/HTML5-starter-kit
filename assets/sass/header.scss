@@ -5,16 +5,15 @@
 
 #header {
     padding: 0 2% 0 2%;
-    background-color: $base-color;
+    background-color: $primary-color;
     width: 96%;
-    @include bg-gradient(lighten($base-color, 10%), $base-color);
+    @include bg-gradient(lighten($primary-color, 10%), $primary-color);
     @include drop-shadow(0, 0, 13px, 3px);
     border-bottom:3px solid $secondary-color;
     position:fixed;
     z-index:3;
     left:0;
     height:42px;
-    
 }
 
 .header-wrapper{
@@ -33,7 +32,7 @@ h1 {
 
 .mobile-nav{
     float:left;
-    border:1px solid lighten($base-color, 10%);
+    border:1px solid lighten($primary-color, 10%);
     @include rounded(5);
     color:white;
     padding:5px;
@@ -43,9 +42,10 @@ h1 {
 
 .mobile-nav.active,
 .mobile-nav:hover{
-    background-color:lighten($base-color, 10%);
-    border:1px solid $base-color;
+    background-color:lighten($primary-color, 10%);
+    border:1px solid $primary-color;
 }
+
 
 .mobile-nav span{
     font-size: 3.0em;
@@ -54,7 +54,6 @@ h1 {
 
 #main-nav{
     position:absolute;
-    background-color:$base-color;
     @include drop-shadow(inset, -4px, -4px, 10px, #000);
     top:45px;
     width:70%;
@@ -63,7 +62,54 @@ h1 {
     z-index:2;
     padding:0;
     @include transition(left, 0.3s, linear);
+    background-color:$primary-color;
 }
+
+#main-nav ul{
+    width:100%;
+    margin: 0;
+    padding:0;
+    float:right;
+}
+
+#main-nav ul li {
+    @include block-left();
+    height:100%;
+    margin:0;
+    width:100%;
+}
+
+
+#main-nav ul li a {
+    color: darken($off-white, 20%);
+    @include block-left();
+    outline: none;
+    text-decoration: none;
+    width:90%;
+    margin:0 0 10px 0;
+    padding:10px 0 10px 10%;
+    text-align: left;
+}
+
+#main-nav ul li span{
+    float:right;
+    width: 40px;
+    font-size:3.0em;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    height:auto;
+    padding:0;
+}
+
+#main-nav ul li a.active,
+#main-nav ul li a:hover{
+    color:white; 
+}
+
+#main-nav ul li a.active{
+    background-color:lighten($primary-color, 10%);
+}
+
 
 #main-nav .center-content{
     margin:0;
@@ -79,44 +125,5 @@ h1 {
     left:79%;
 }
 
-#main-nav ul{
-    margin: 0;
-    padding:0;
-    float:left;
-    width:100%;
-}
-#main-nav ul li {
-    display: block;
-    float: left;
-    height:100%;
-    width:100%;
-    margin:0;
-}
 
-#main-nav ul li a {
-    color: darken($off-white, 20%);
-    display: block;
-    float: left;
-    outline: none;
-    text-decoration: none;
-    width:90%;
-    margin:0 0 10px 0;
-    padding:10px 0 10px 10%;
-}
 
-#main-nav ul li a.active{
-    background-color:lighten($base-color, 10%);
-}
-
-#main-nav ul li a.active,
-#main-nav ul li a:hover{
-    color:white; 
-}
-
-#main-nav ul li span{
-    float:right;
-    width: 40px;
-    text-align: center;
-    margin: 10px 10px 10px 10px;
-    font-size:3.0em;
-}

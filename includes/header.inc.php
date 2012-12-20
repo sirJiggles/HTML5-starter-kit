@@ -18,10 +18,9 @@ $currentPage = str_replace('.php', '', end(explode('/', $_SERVER['SCRIPT_FILENAM
     	<title>Gareth Fuller | HTML5 Base</title>
             
         <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="assets/js/html5-3.6-respond-1.1.0.min.js"></script>
+            <script src="assets/js/vendor/htmlshiv.min.js"></script>
         <![endif]-->
-        
+
         <!-- META -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -48,6 +47,10 @@ $currentPage = str_replace('.php', '', end(explode('/', $_SERVER['SCRIPT_FILENAM
             <link rel="stylesheet" href="assets/css/grid-fixed.css" media="screen" type="text/css"/>
         <![endif]-->
 
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="assets/css/ie.css" media="screen" type="text/css"/>
+        <![endif]-->
+        
         <!-- Syntax highlighter -->
         <link rel="stylesheet" href="librarys/syntax-highlighter/shCoreDefault.css" media="screen" type="text/css"/>
         
@@ -55,7 +58,7 @@ $currentPage = str_replace('.php', '', end(explode('/', $_SERVER['SCRIPT_FILENAM
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
         
     </head>
-    <body>
+    <body class="new">
         
         <!-- used for sticky footer -->
         <div id="site-wrapper">

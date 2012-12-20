@@ -64,7 +64,7 @@ table {
   float: left;
   width: 100%; }
 
-/* Grid */
+/* Mobile Grid Styles */
 .grid-1,
 .grid-2,
 .grid-3,
@@ -164,12 +164,12 @@ form legend {
   font-family: 'Raleway', sans-serif; }
 
 form input {
-  width: 89%;
+  width: 92%;
   padding: 4%;
   margin: 0 0 2% 0; }
 
 form input[type='search'] {
-  width: 98%; }
+  width: 100%; }
 
 form input[type='submit'] {
   background-color: #15a2ed;
@@ -187,7 +187,7 @@ form input[type='submit']:active {
 /* New input types */
 progress,
 meter {
-  width: 89%;
+  width: 100%;
   margin: 0 0 4% 0;
   display: block;
   float: left; }
@@ -245,7 +245,6 @@ h1 {
 
 #main-nav {
   position: absolute;
-  background-color: #222222;
   -moz-box-shadow: inset -4px -4px 10px black;
   -webkit-box-shadow: inset -4px -4px 10px black;
   box-shadow: inset -4px -4px 10px black;
@@ -258,7 +257,48 @@ h1 {
   transition: left 0.3s linear;
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
-  -o-transition: left 0.3s linear; }
+  -o-transition: left 0.3s linear;
+  background-color: #222222; }
+
+#main-nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: right; }
+
+#main-nav ul li {
+  display: block;
+  float: left;
+  height: 100%;
+  margin: 0;
+  width: 100%; }
+
+#main-nav ul li a {
+  color: #bbbbbb;
+  display: block;
+  float: left;
+  outline: none;
+  text-decoration: none;
+  width: 90%;
+  margin: 0 0 10px 0;
+  padding: 10px 0 10px 10%;
+  text-align: left; }
+
+#main-nav ul li span {
+  float: right;
+  width: 40px;
+  font-size: 3.0em;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  height: auto;
+  padding: 0; }
+
+#main-nav ul li a.active,
+#main-nav ul li a:hover {
+  color: white; }
+
+#main-nav ul li a.active {
+  background-color: #3c3c3c; }
 
 #main-nav .center-content {
   margin: 0;
@@ -270,43 +310,6 @@ h1 {
 
 #site-wrapper.css-nav-open #main {
   left: 79%; }
-
-#main-nav ul {
-  margin: 0;
-  padding: 0;
-  float: left;
-  width: 100%; }
-
-#main-nav ul li {
-  display: block;
-  float: left;
-  height: 100%;
-  width: 100%;
-  margin: 0; }
-
-#main-nav ul li a {
-  color: #bbbbbb;
-  display: block;
-  float: left;
-  outline: none;
-  text-decoration: none;
-  width: 90%;
-  margin: 0 0 10px 0;
-  padding: 10px 0 10px 10%; }
-
-#main-nav ul li a.active {
-  background-color: #3c3c3c; }
-
-#main-nav ul li a.active,
-#main-nav ul li a:hover {
-  color: white; }
-
-#main-nav ul li span {
-  float: right;
-  width: 40px;
-  text-align: center;
-  margin: 10px 10px 10px 10px;
-  font-size: 3.0em; }
 
 .push {
   height: 150px;
@@ -333,8 +336,7 @@ body {
 #site-wrapper {
   height: 100%;
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
+  height: auto;
   margin-bottom: -150px;
   position: relative;
   overflow: auto; }
@@ -352,7 +354,6 @@ body {
   float: left;
   width: 100%;
   position: relative;
-  width: 100%;
   transition: left 0.3s linear;
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
@@ -374,10 +375,10 @@ body {
   float: left;
   margin: 0 0 1px 0;
   text-decoration: none;
-  transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear; }
+  transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear; }
 
 #accordian a.accordian-link:hover {
   background-color: #44b5f1; }
@@ -399,16 +400,14 @@ body {
   -ms-transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -o-transform: rotate(270deg);
-  -moz-transform: rotate(270deg); }
+  -moz-transform: rotate(270deg);
+  margin: 1% 0 0 0; }
 
 #accordian a.accordian-link h3 {
   float: left;
   display: inline-block; }
 
 #accordian a.open {
-  -moz-box-shadow: 0 13px 15px -10px #222222;
-  -webkit-box-shadow: 0 13px 15px -10px #222222;
-  box-shadow: 0 13px 15px -10px #222222;
   position: relative;
   z-index: 2;
   margin: 0; }
@@ -563,8 +562,9 @@ a.gallery-buttons-thumbs.previous {
 
 /* Responsive styles 
 
-Styles should be mobile first, this means mobile styles will be done by default
-and anything else will be added (enhansed) in this sheet
+Mobile first css,
+
+the mixins is where you want to put the styles, the mixins are both used here and in IE stylesheet 
 
 DEVICES
 
@@ -596,7 +596,9 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 */
 /* MOBILE LANDSCAPE UP */
 @media only screen and (min-width: 480px) {
-  /* MAIN NAVIGATION */
+  .mobile-nav {
+    display: none; }
+
   #main-nav {
     position: fixed;
     z-index: 4;
@@ -604,57 +606,49 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     padding: 0 2% 0 2%;
     left: 0;
     background: none;
+    height: auto;
+    top: 0;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
-    box-shadow: none;
-    height: auto;
-    top: 0; }
+    box-shadow: none; }
 
-  #site-wrapper.css-nav-open #main-nav,
-  #site-wrapper.css-nav-open #main {
-    left: 0; }
+  #main-nav ul {
+    border-left: 1px solid #444; }
 
   #main-nav .center-content {
     margin: 0 auto;
+    max-width: 940px;
     width: 90%;
     padding: 0 5% 0 5%; }
-
-  #main-nav ul {
-    float: right;
-    border-left: 1px solid #444;
-    width: 100%; }
 
   #main-nav ul li {
     border-right: 1px solid #444;
     width: 24.5%; }
 
-  .mobile-nav {
-    display: none; }
-
   #main-nav ul li a {
-    padding: 10px 0 0 0; }
+    margin: 0;
+    padding: 10px 0 0 0;
+    text-align: left; }
 
   #main-nav ul li a.active {
     background: none; }
 
   #main-nav ul li span {
     float: left;
-    margin: 10px 5px 10px 5px;
-    width: 30px; }
+    margin: 10px 0 10px 0;
+    height: 12px;
+    padding: 0; }
+
+  #site-wrapper.css-nav-open #main-nav,
+  #site-wrapper.css-nav-open #main {
+    left: 0; }
 
   #accordian .accordian-slide {
-    border-left: 5px solid #15a2ed; }
+    border-left: 3px solid #15a2ed; }
 
   form input {
-    width: 94%;
-    padding: 2%; }
-
-  form input[type='search'] {
-    width: 100%; }
-
-  form label {
-    padding: 0;
-    width: 94%; } }
+    width: 96%;
+    padding: 2%; } }
 /* TABLET UP */
 @media only screen and (min-width: 678px) {
   .grid-1 {
@@ -699,51 +693,58 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
   .end {
     margin: 0; }
 
-  /* Form styles */
-  progress,
-  meter {
-    width: 59%;
-    margin: 0 0 4% 0; }
-
-  form label {
-    width: 40%; }
-
-  form input {
-    width: 57%;
-    padding: 1%; }
-
-  form input[type='search'] {
-    width: 59%; }
-
-  #accordian .accordian-slide {
-    border-left: 10px solid #15a2ed; } }
-/* DEKSTOP UP */
-@media only screen and (min-width: 940px) {
-  #gallery-container {
-    width: 60%; }
-
-  h1 {
-    text-indent: 0px; }
-
   #header {
     height: 75px; }
 
   #main {
     padding: 95px 0 0 0; }
 
-  /* NAV */
+  #main-nav ul li a {
+    padding: 28px 0 15px 15px; }
+
+  #main-nav ul li a span {
+    margin: 10px 10px 10px 0; }
+
+  #accordian .accordian-slide {
+    border-left: 7px solid #15a2ed; }
+
+  form input {
+    width: 55%;
+    padding: 2%; }
+
+  form label {
+    width: 40%; }
+
+  form input[type='search'] {
+    width: 59%; }
+
+  progress,
+  meter {
+    width: 59%; } }
+/* DESKTOP UP (THESE ARE IE8 AND UP) */
+@media only screen and (min-width: 940px) {
+  h1 {
+    text-indent: 0px; }
+
+  #gallery-container {
+    width: 60%; }
+
   #main-nav ul {
     width: auto; }
 
+  #main-nav ul li {
+    width: 75px; }
+
   #main-nav ul li a {
-    margin: 0;
-    padding: 0;
-    height: 75px;
+    padding: 15px 0 8px 0;
     text-align: center; }
 
-  #main-nav ul li span {
-    text-align: center;
-    width: 100%;
-    margin: 10px 0 10px 0;
-    height: 16px;
-    padding: 10px 0 0 0; } }
+  #main-nav ul li a span {
+    padding: 0 0 0 12px; }
+
+  #accordian .accordian-slide {
+    border-left: 10px solid #15a2ed; }
+
+  form input {
+    width: 57%;
+    padding: 1%; } }

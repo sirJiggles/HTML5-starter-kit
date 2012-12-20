@@ -31,8 +31,10 @@ var supports = (function(prop) {
 });
 
 
+
 /* Document ready function */
 $(document).ready(function() {
+
     
     $('html').removeClass('no-js');
 
@@ -49,11 +51,25 @@ $(document).ready(function() {
         galleryJs();
     }
     
-    /* Mobile navigation */
-    $('.mobile-nav').click(function(e){
-        e.preventDefault();
-        mobileNavToggle();
-    });
+    /* Mobile navigation */    
+    if ( $('.mobile-nav').length > 0 ){
+
+        // click event for mobile button
+        $('.mobile-nav').click(function(e){
+            e.preventDefault();
+            mobileNavToggle();
+
+        });
+
+        // swipe event for controlling the nav
+        var hammer = new Hammer(document.getElementById("site-wrapper"));
+
+        hammer.onswipe= function(event){
+            mobileNavToggle();
+        }
+
+    }
+
     
     
 });
@@ -63,7 +79,7 @@ function accordianJs(){
     
     $('.accordian-slide').slideUp();
     
-    $('#accordian').find('a').click(function(e){
+    $('#accordian a').click(function(e){
         
         e.preventDefault();
         
@@ -71,19 +87,24 @@ function accordianJs(){
             
             $('.accordian-slide').slideUp();
             $(this).next().slideToggle();
-            $('#accordian').find('a').removeClass('open');
+            $('#accordian a').removeClass('open');
             $(this).toggleClass('open');
             
         }
     })
-    
-    runAccordian = true;
 }
 
 /* Function for the mobile navigation */
 function mobileNavToggle(){
     
     $('.mobile-nav').toggleClass('active');
+
+    // Swipe events for the mobile nav 
+    /*if ($('#site-wrapper').hasClass('css-nav-open') ){
+        removeSwipe($('#site-wrapper'));
+    }else{
+        swipe($('#site-wrapper'), mobileNavToggle, 'left');
+    }*/
     
     // CSS METHOD FIRST
     if (supports('transition')){
