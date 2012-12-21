@@ -1,12 +1,13 @@
 
 @mixin mobile-land-styles(){
 
+
 	.mobile-nav{
         display:none;
     }
 
     #main-nav{
-        position: fixed;
+        position:fixed;
         z-index: 4;
         width: 96%;
         padding: 0 2% 0 2%;
@@ -35,25 +36,32 @@
 
     #main-nav ul li a{
         margin:0;
-        padding:10px 0 0 0;
-        text-align:left;
+        padding:10px 0 10px 0;
     }
 
     #main-nav ul li a.active{
         background:none;
     }
 
-    #main-nav ul li span{
-        float:left;
-        margin:10px 0 10px 0;
-        height:12px;
-        padding:0;
+
+    body.css-nav-open #main-nav,
+    #main-nav{
+        left:0 !important;
+        position: fixed;
     }
 
+    body.css-nav-open #main,
+    #main{
+        width:100%;
+        left:0 !important;
+        position:relative;
+    }
 
-    #site-wrapper.css-nav-open #main-nav,
-    #site-wrapper.css-nav-open #main{
-       left:0;  
+    body.css-nav-open .push,
+    .push
+    body.css-nav-open #site-footer,
+    #site-footer{
+        display:block;
     }
 
     // ACCORDIAN
@@ -61,10 +69,15 @@
         border-left:3px solid $secondary-color;
     }
 
+
     // FORMS
     form input {
 	    width: 96%;
 	    padding:2%;
+    }
+
+    form input[type='search'] {
+        width:95%;
     }
 }
 
@@ -96,11 +109,7 @@
 
     // NAV AMENDS
     #main-nav ul li a{
-        padding:28px 0 15px 15px
-    }
-
-    #main-nav ul li a span{
-        margin:10px 10px 10px 0;
+        padding:25px 0 27px 15px
     }
 
     // ACCORDIAN
@@ -119,7 +128,7 @@
     }
 
     form input[type='search'] {
-	    width:59%;
+	    width:55%;
 	}
 
 	progress,
@@ -148,13 +157,12 @@
     }
 
     #main-nav ul li a {
-        padding: 15px 0 8px 0;
+        padding: 10px 0 14px 0;
         text-align: center;
+        margin:0;
+        line-height:1.6em;
     }
 
-    #main-nav ul li a span{
-        padding:0 0 0 12px;
-    }
 
     // ACCORIDIAN
     #accordian .accordian-slide{
@@ -167,4 +175,7 @@
 	    padding:1%;
     }
 
+    form input[type='search'] {
+        width:57%;
+    }
 }

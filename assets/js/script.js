@@ -31,7 +31,6 @@ var supports = (function(prop) {
 });
 
 
-
 /* Document ready function */
 $(document).ready(function() {
 
@@ -61,16 +60,8 @@ $(document).ready(function() {
 
         });
 
-        // swipe event for controlling the nav
-        var hammer = new Hammer(document.getElementById("site-wrapper"));
-
-        hammer.onswipe= function(event){
-            mobileNavToggle();
-        }
-
     }
 
-    
     
 });
 
@@ -99,17 +90,27 @@ function mobileNavToggle(){
     
     $('.mobile-nav').toggleClass('active');
 
-    // Swipe events for the mobile nav 
-    /*if ($('#site-wrapper').hasClass('css-nav-open') ){
-        removeSwipe($('#site-wrapper'));
+    $('body').toggleClass('css-nav-open');
+
+    if( $('body').hasClass('css-nav-open') ){
+
+        // swipe event for controlling the nav
+        hammer = new Hammer(document.getElementById("main-wrapper"));
+
+        hammer.onswipe = function(event){
+            if(event.direction == 'left'){
+                mobileNavToggle();
+            }
+        }
+
     }else{
-        swipe($('#site-wrapper'), mobileNavToggle, 'left');
-    }*/
-    
+        // remove the swipe event (to regain control)
+        hammer.destroy()
+    }  
+
     // CSS METHOD FIRST
     if (supports('transition')){
-        $('#site-wrapper').toggleClass('css-nav-open');
-        return;
+        return true;
     }
 
     // JS METHOD
@@ -121,9 +122,7 @@ function mobileNavToggle(){
         }, speed);
         $('#main').stop().animate({
             left: '70%'
-        }, speed, function(){
-            $('#site-wrapper').css('overflow', 'hidden');
-        });
+        }, speed);
 
     }else{
         
@@ -132,11 +131,10 @@ function mobileNavToggle(){
         }, speed);
         $('#main').stop().animate({
             left: '0'
-        }, speed, function(){  
-            $('#site-wrapper').css('overflow', 'auto');
-        });
+        }, speed);
     }
 }
+
 
 /* function to init the gallery */
 function galleryJs(){

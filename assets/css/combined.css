@@ -82,7 +82,7 @@ table {
 /* Typography style sheet */
 /* Cusotom font face */
 @font-face {
-  font-family: 'entypo';
+  font-family: "entypo";
   src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot");
   src: url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.eot?#iefix") format("embedded-opentype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.woff") format("woff"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.ttf") format("truetype"), url("http://www.garethfuller.com/test/starter-kit/assets/fonts/entypo.svg#entypo") format("svg");
   font-weight: normal;
@@ -244,11 +244,9 @@ h1 {
   margin: 0; }
 
 #main-nav {
-  position: absolute;
   -moz-box-shadow: inset -4px -4px 10px black;
   -webkit-box-shadow: inset -4px -4px 10px black;
   box-shadow: inset -4px -4px 10px black;
-  top: 45px;
   width: 70%;
   left: -100%;
   height: 100%;
@@ -258,7 +256,9 @@ h1 {
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
   -o-transition: left 0.3s linear;
-  background-color: #222222; }
+  background-color: #222222;
+  top: 45px;
+  position: absolute; }
 
 #main-nav ul {
   width: 100%;
@@ -280,18 +280,18 @@ h1 {
   outline: none;
   text-decoration: none;
   width: 90%;
-  margin: 0 0 10px 0;
-  padding: 10px 0 10px 10%;
+  margin: 0;
+  padding: 10px 0 10px 9%;
   text-align: left; }
 
 #main-nav ul li span {
-  float: right;
   width: 40px;
   font-size: 3.0em;
   text-align: center;
-  margin: 10px 10px 10px 10px;
-  height: auto;
-  padding: 0; }
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  height: 12px; }
 
 #main-nav ul li a.active,
 #main-nav ul li a:hover {
@@ -305,11 +305,19 @@ h1 {
   padding: 0;
   width: 100%; }
 
-#site-wrapper.css-nav-open #main-nav {
-  left: 0; }
+/* CHANGES WHEN THE NAV IS OPEN */
+body.css-nav-open #main-nav {
+  left: 0;
+  position: relative; }
 
-#site-wrapper.css-nav-open #main {
-  left: 79%; }
+body.css-nav-open #main {
+  width: 90%;
+  left: 79%;
+  position: fixed; }
+
+body.css-nav-open .push,
+body.css-nav-open #site-footer {
+  display: none; }
 
 .push {
   height: 150px;
@@ -341,9 +349,6 @@ body {
   position: relative;
   overflow: auto; }
 
-#site-wrapper.css-nav-open {
-  overflow: hidden; }
-
 #content {
   width: 100%;
   padding: 0 0 20px 0; }
@@ -353,7 +358,6 @@ body {
   display: block;
   float: left;
   width: 100%;
-  position: relative;
   transition: left 0.3s linear;
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
@@ -362,7 +366,9 @@ body {
   -moz-transform: translate(0%);
   -ms-transform: translate(0%);
   -o-transform: translate(0%);
-  transform: translate(0%); }
+  transform: translate(0%);
+  position: relative;
+  left: 0; }
 
 /* Accordian styles */
 #accordian a.accordian-link,
@@ -627,28 +633,37 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
 
   #main-nav ul li a {
     margin: 0;
-    padding: 10px 0 0 0;
-    text-align: left; }
+    padding: 10px 0 10px 0; }
 
   #main-nav ul li a.active {
     background: none; }
 
-  #main-nav ul li span {
-    float: left;
-    margin: 10px 0 10px 0;
-    height: 12px;
-    padding: 0; }
+  body.css-nav-open #main-nav,
+  #main-nav {
+    left: 0 !important;
+    position: fixed; }
 
-  #site-wrapper.css-nav-open #main-nav,
-  #site-wrapper.css-nav-open #main {
-    left: 0; }
+  body.css-nav-open #main,
+  #main {
+    width: 100%;
+    left: 0 !important;
+    position: relative; }
+
+  body.css-nav-open .push,
+  .push
+  body.css-nav-open #site-footer,
+  #site-footer {
+    display: block; }
 
   #accordian .accordian-slide {
     border-left: 3px solid #15a2ed; }
 
   form input {
     width: 96%;
-    padding: 2%; } }
+    padding: 2%; }
+
+  form input[type='search'] {
+    width: 95%; } }
 /* TABLET UP */
 @media only screen and (min-width: 678px) {
   .grid-1 {
@@ -700,10 +715,7 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     padding: 95px 0 0 0; }
 
   #main-nav ul li a {
-    padding: 28px 0 15px 15px; }
-
-  #main-nav ul li a span {
-    margin: 10px 10px 10px 0; }
+    padding: 25px 0 27px 15px; }
 
   #accordian .accordian-slide {
     border-left: 7px solid #15a2ed; }
@@ -716,7 +728,7 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     width: 40%; }
 
   form input[type='search'] {
-    width: 59%; }
+    width: 55%; }
 
   progress,
   meter {
@@ -736,15 +748,17 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     width: 75px; }
 
   #main-nav ul li a {
-    padding: 15px 0 8px 0;
-    text-align: center; }
-
-  #main-nav ul li a span {
-    padding: 0 0 0 12px; }
+    padding: 10px 0 14px 0;
+    text-align: center;
+    margin: 0;
+    line-height: 1.6em; }
 
   #accordian .accordian-slide {
     border-left: 10px solid #15a2ed; }
 
   form input {
     width: 57%;
-    padding: 1%; } }
+    padding: 1%; }
+
+  form input[type='search'] {
+    width: 57%; } }

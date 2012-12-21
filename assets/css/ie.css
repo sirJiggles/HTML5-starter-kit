@@ -30,21 +30,27 @@
 
 #main-nav ul li a {
   margin: 0;
-  padding: 10px 0 0 0;
-  text-align: left; }
+  padding: 10px 0 10px 0; }
 
 #main-nav ul li a.active {
   background: none; }
 
-#main-nav ul li span {
-  float: left;
-  margin: 10px 0 10px 0;
-  height: 12px;
-  padding: 0; }
+body.css-nav-open #main-nav,
+#main-nav {
+  left: 0 !important;
+  position: fixed; }
 
-#site-wrapper.css-nav-open #main-nav,
-#site-wrapper.css-nav-open #main {
-  left: 0; }
+body.css-nav-open #main,
+#main {
+  width: 100%;
+  left: 0 !important;
+  position: relative; }
+
+body.css-nav-open .push,
+.push
+body.css-nav-open #site-footer,
+#site-footer {
+  display: block; }
 
 #accordian .accordian-slide {
   border-left: 3px solid #15a2ed; }
@@ -52,6 +58,9 @@
 form input {
   width: 96%;
   padding: 2%; }
+
+form input[type='search'] {
+  width: 95%; }
 
 .grid-1 {
   width: 5.78704%; }
@@ -102,10 +111,7 @@ form input {
   padding: 95px 0 0 0; }
 
 #main-nav ul li a {
-  padding: 28px 0 15px 15px; }
-
-#main-nav ul li a span {
-  margin: 10px 10px 10px 0; }
+  padding: 25px 0 27px 15px; }
 
 #accordian .accordian-slide {
   border-left: 7px solid #15a2ed; }
@@ -118,7 +124,7 @@ form label {
   width: 40%; }
 
 form input[type='search'] {
-  width: 59%; }
+  width: 55%; }
 
 progress,
 meter {
@@ -137,11 +143,10 @@ h1 {
   width: 75px; }
 
 #main-nav ul li a {
-  padding: 15px 0 8px 0;
-  text-align: center; }
-
-#main-nav ul li a span {
-  padding: 0 0 0 12px; }
+  padding: 10px 0 14px 0;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6em; }
 
 #accordian .accordian-slide {
   border-left: 10px solid #15a2ed; }
@@ -149,3 +154,6 @@ h1 {
 form input {
   width: 57%;
   padding: 1%; }
+
+form input[type='search'] {
+  width: 57%; }

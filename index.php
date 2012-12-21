@@ -1,6 +1,4 @@
-    <?php include('includes/header.inc.php'); ?>
-
-    <div class="center-content main-content">
+<?php include('includes/header.inc.php'); ?>
 
 <!-- Main content -->
 <div id="main" role="main">

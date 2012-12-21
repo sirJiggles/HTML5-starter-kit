@@ -59,22 +59,23 @@ $currentPage = str_replace('.php', '', end(explode('/', $_SERVER['SCRIPT_FILENAM
         
     </head>
     <body class="new">
-        
+
+        <!-- Main navigation -->
+        <nav id="main-nav" role="navigation" class="col grid-12 end">
+            <div class="center-content">
+                <ul>
+                    <li><a href="index.php" title="index" <?php echo ($currentPage == 'index') ? "class='active'" : ''; ?>><span class="icon">&#128240;</span>Forms</a></li>
+                    <li><a href="tags.php" title="tags" <?php echo ($currentPage == 'tags') ? "class='active'" : ''; ?>><span class="icon">&#59148;</span>Tags</a></li>
+                    <li><a href="grid.php" title="grid" <?php echo ($currentPage == 'grid') ? "class='active'" : ''; ?>><span class="icon">&#9871;</span>Grid</a></li>
+                    <li><a href="gallery.php" title="gallery" <?php echo ($currentPage == 'gallery') ? "class='active'" : ''; ?>><span class="icon">&#128247;</span>Gallery</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    
         <!-- used for sticky footer -->
         <div id="site-wrapper">
-            
-            <!-- Main navigation -->
-            <nav id="main-nav" role="navigation" class="col grid-12 end">
-                <div class="center-content">
-                    <ul>
-                        <li><a href="index.php" title="index" <?php echo ($currentPage == 'index') ? "class='active'" : ''; ?>><span class="icon">&#128240;</span>Forms</a></li>
-                        <li><a href="tags.php" title="tags" <?php echo ($currentPage == 'tags') ? "class='active'" : ''; ?>><span class="icon">&#59148;</span>Tags</a></li>
-                        <li><a href="grid.php" title="grid" <?php echo ($currentPage == 'grid') ? "class='active'" : ''; ?>><span class="icon">&#9871;</span>Grid</a></li>
-                        <li><a href="gallery.php" title="gallery" <?php echo ($currentPage == 'gallery') ? "class='active'" : ''; ?>><span class="icon">&#128247;</span>Gallery</a></li>
-                    </ul>
-                </div>
-            </nav>
-            
+
             <header id="header" class="col grid-12 end" role="banner">
                 <div class="center-content">
 
@@ -84,3 +85,14 @@ $currentPage = str_replace('.php', '', end(explode('/', $_SERVER['SCRIPT_FILENAM
 
                 </div>
             </header>
+
+            
+            
+            
+            
+
+            <div class="center-content main-content" id="main-wrapper">
+
+
+
+                

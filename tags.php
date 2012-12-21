@@ -1,7 +1,5 @@
 <?php include('includes/header.inc.php'); ?>
 
-<div class="center-content main-content">
-
 <!-- Main content -->
 <div id="main" role="main">
 
