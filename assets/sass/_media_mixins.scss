@@ -79,12 +79,13 @@
     form input[type='search'] {
         width:95%;
     }
+
 }
 
 @mixin tablet-styles(){
 
 	// Generate grid
-    @for $i from 1 through $cols {
+   @for $i from 1 through $cols {
         $new-width: ($col-width * $i ) + ($gutter-width * ($i - 1));
         .grid-#{$i} {
             width: $new-width;

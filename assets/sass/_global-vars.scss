@@ -8,11 +8,11 @@ $base-font: 16;
 $cols: 12;
 
 $gutter-width: ((($site-width / $cols) / 3) / $site-width) * 100%;
-$gutter-width-abs: ($site-width / $cols) / 3;
+$gutter-width-abs: ($site-width / $cols) / 4;
 $total-gutter: (($site-width / $cols) / 3) * ($cols - 1);
 $remaining-page: $site-width - $total-gutter;
 $col-width: (($remaining-page / $cols) / $site-width) * 100%;
-$col-width-abs: ($remaining-page / $cols);
+$col-width-abs: ($remaining-page / $cols) + ($cols / 2);
 
 $off-white: #eee;
 
