@@ -551,7 +551,3 @@ GarethGallery.prototype.clearGalleryTimeout = function(){
         this.autoGalleryRunning = false;
     }
 }
-
-
-
-
