@@ -138,12 +138,15 @@ function mobileNavToggle(){
 
 /* function to init the gallery */
 function galleryJs(){
-    $('#gallery-inner').garethGallery({ 'leftButton'   : 'previous-button',
-                                        'rightButton'  : 'next-button',
-                                        'thumbnails'   : 'thumbnails-inner',
-                                        'thumbLeft'    : 'previous-button-icons',
-                                        'thumbRight'   : 'next-button-icons',
-                                        'swapImages'   : true,
-                                        'progressBar'  : 'status'
-                                        });
+    var gallery = new GarethGallery({   'element'       : 'gallery-inner',
+                                        'leftButton'    : 'previous-button',
+                                        'rightButton'   : 'next-button',
+                                        'thumbnails'    : 'thumbnails-inner',
+                                        'thumbLeft'     : 'previous-button-icons',
+                                        'thumbRight'    : 'next-button-icons',
+                                        'swapImages'    : true,
+                                        'progressBar'   : 'status'
+                                        } );
+    // start the gallery
+    gallery.start();
 }
