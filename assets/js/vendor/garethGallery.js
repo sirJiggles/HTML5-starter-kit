@@ -29,8 +29,8 @@ var GarethGallery = function(options){
         swapImages  : false,
         progressBar : false,
         autoMoveSpeed: 4000,
-        swapWidth : 550,
-        swapHeight: 550,
+        swapWidth : 400,
+        swapHeight: 400,
         element : 'gallery'
     };
     
@@ -250,8 +250,8 @@ GarethGallery.prototype.resize = function(){
         $('#'+this.options.thumbnails).css('left', 0);
 
         // reset the active state
-        $('#'+this.options.thumbnails).find('.active').removeClass('active');
-        $('#'+this.options.thumbnails).find('li').eq(0).addClass('active');
+        $('#'+this.options.thumbnails+' .active').removeClass('active');
+        $('#'+this.options.thumbnails+' li').eq(0).addClass('active');
 
         // re-calculate the thumbnail params!
         this.thumbWidth = $('#'+this.options.thumbnails).children(0).outerWidth(true);
@@ -264,7 +264,7 @@ GarethGallery.prototype.resize = function(){
     // Image swapping
     if(this.swapImages){
         if (!this.imagesSwapped){
-            if (($(this).height() > this.options.swapHeight) && ($(this).width() > this.options.swapWidth)){
+            if (($(this.element).height() > this.options.swapHeight) && ($(this.element).width() > this.options.swapWidth)){
                 // swap images set flag
                 this.swapImages();
             }
