@@ -621,7 +621,7 @@ GarethGallery.prototype.move = function(direction, multiplier, touch, thumbClick
                     $(this.element).css('left', currentLeft - ( this.paneWidth * multiplier) );
                 }else{
                     $(this.element).animate({
-                        left: currentLeft - ( this.paneWidth * multiplier) 
+                        left: ( (this.amountItems -1) * this.paneWidth) - (( (this.amountItems - 1) * this.paneWidth) * 2)
                     }, this.options.speed, function() {
                     });
                 }
@@ -682,10 +682,7 @@ GarethGallery.prototype.move = function(direction, multiplier, touch, thumbClick
                      if(this.css3){
                         $(this.element).css('left', ( (this.amountItems -1) * this.paneWidth) - (( (this.amountItems - 1) * this.paneWidth) * 2));
                     }else{
-                        $(this.element).animate({
-                            left: ( (this.amountItems -1) * this.paneWidth) - (( (this.amountItems - 1) * this.paneWidth) * 2)
-                        }, this.options.speed, function() {
-                        });
+                        this.moveThumbs('left');
                     }
                 }
                 cantMoveLeft = true;
