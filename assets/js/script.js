@@ -5,32 +5,6 @@
  */
 
 
-/* 
- * This function is used for detecting browser CSS3 functionality support 
- * 
- * Original code found here http://net.tutsplus.com/tutorials/html-css-techniques/quick-tip-detect-css-support-in-browsers-with-javascript/
- * only modified slightly (to exlude khtml webkit and break in the while loop)
- */
-var supports = (function(prop) {  
-   var div = document.createElement('div'),  
-      vendors = 'Ms O Moz Webkit'.split(' '),  
-      len = vendors.length;  
-   
-    if ( prop in div.style ) return true;  
-    prop = prop.replace(/^[a-z]/, function(val) {  
-        return val.toUpperCase();  
-    });  
-    while(len--) {  
-        if ( vendors[len] + prop in div.style ) {  
-        return true;  
-        break;
-        }  
-    }  
-    return false;  
-
-});
-
-
 /* Document ready function */
 $(document).ready(function() {
 
@@ -138,12 +112,65 @@ function mobileNavToggle(){
 
 /* function to init the gallery */
 function galleryJs(){
-    $('#gallery-inner').garethGallery({ 'leftButton'   : 'previous-button',
+    
+    var gallery = new GarethGallery({   'element'      :'gallery-inner',
+                                        'leftButton'   : 'previous-button',
                                         'rightButton'  : 'next-button',
                                         'thumbnails'   : 'thumbnails-inner',
                                         'thumbLeft'    : 'previous-button-icons',
                                         'thumbRight'   : 'next-button-icons',
                                         'swapImages'   : true,
+                                        'touch'        : true,
                                         'progressBar'  : 'status'
                                         });
+    gallery.start();
+}
+
+
+/* Supports function for js fallback on css3 animations */
+var supports = (function(prop) {  
+  
+    var vendors = 'ms O Moz Webkit'.split(' ');
+    
+    // check for standard support
+    if ( prop in document.documentElement.style ) return true;  
+
+    //check for cammal case one word support
+    var propParts = prop.split('-');
+    var propCamel = propParts[0];
+    for(var i=1,len=propParts.length; i<len; i++){
+        propCamel += propParts[i].replace(/^[a-z]/, function(val) {  
+            return val.toUpperCase();  
+        });
+    };
+    
+    if ( propCamel in document.documentElement.style ) return true;
+   
+    
+    prop = prop.replace(/^[a-z]/, function(val) {  
+        return val.toUpperCase();  
+    });
+    
+    var len = vendors.length;
+    
+    while(len--) {  
+        if ( vendors[len] + prop in document.documentElement.style ) {  
+            return true;
+        }  
+    } 
+    return false;  
+
+});
+
+
+function isTouchDevice() {
+
+    if ("ontouchstart" in document.documentElement)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
 }

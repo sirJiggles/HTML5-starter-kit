@@ -96,7 +96,7 @@ span.icon {
 body {
   /* base font size */
   font-size: 16px;
-  line-height: 1.1875em;
+  line-height: 1.78125em;
   color: #555555;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -106,13 +106,13 @@ h1, h2, h3 {
 
 h1 {
   font-size: 1.625em;
-  line-height: 1.625em;
+  line-height: 2.4375em;
   font-weight: 400;
   color: #eeeeee; }
 
 h2 {
   font-size: 1.125em;
-  line-height: 1.125em;
+  line-height: 1.6875em;
   font-weight: 700;
   margin: 0 0 20px 0;
   display: block;
@@ -121,7 +121,7 @@ h2 {
 
 h3 {
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0; }
 
@@ -226,9 +226,9 @@ h1 {
 .mobile-nav {
   float: left;
   border: 1px solid #3c3c3c;
-  border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  border-radius: 5px;
   color: white;
   padding: 5px;
   margin: 5px 0 5px 0;
@@ -252,10 +252,10 @@ h1 {
   height: 100%;
   z-index: 2;
   padding: 0;
-  transition: left 0.3s linear;
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
   -o-transition: left 0.3s linear;
+  transition: left 0.3s linear;
   background-color: #222222;
   top: 45px;
   position: absolute; }
@@ -358,15 +358,15 @@ body {
   display: block;
   float: left;
   width: 100%;
-  transition: left 0.3s linear;
   -moz-transition: left 0.3s linear;
   -webkit-transition: left 0.3s linear;
   -o-transition: left 0.3s linear;
-  -webkit-transform: translate(0%);
-  -moz-transform: translate(0%);
-  -ms-transform: translate(0%);
-  -o-transform: translate(0%);
-  transform: translate(0%);
+  transition: left 0.3s linear;
+  -webkit-transform: translate(0%, 20px);
+  -moz-transform: translate(0%, 20px);
+  -ms-transform: translate(0%, 20px);
+  -o-transform: translate(0%, 20px);
+  transform: translate(0%, 20px);
   position: relative;
   left: 0; }
 
@@ -381,10 +381,10 @@ body {
   float: left;
   margin: 0 0 1px 0;
   text-decoration: none;
-  transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
   -webkit-transition: background-color 0.3s linear;
-  -o-transition: background-color 0.3s linear; }
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear; }
 
 #accordian a.accordian-link:hover {
   background-color: #44b5f1; }
@@ -458,7 +458,11 @@ body {
   float: left;
   list-style-type: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
 
 #gallery ul li {
   float: left; }
@@ -507,9 +511,9 @@ body {
   display: block; }
 
 #thumbnails-wrapper li.active {
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$amount)";
+  background: rgba(255, 255, 255, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80FFFFFF', endColorstr='#80FFFFFF',GradientType=0);
+  /* IE6-9 */
   background-color: #15a2ed; }
 
 #thumbnails {
@@ -524,7 +528,11 @@ body {
   float: left;
   list-style-type: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
 
 #progress-bar {
   width: 100%;
