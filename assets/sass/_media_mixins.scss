@@ -101,7 +101,7 @@
 
     // HEADER
     #header {
-        height:75px;
+        height:81px;
     }
 
     #main{
@@ -140,9 +140,13 @@
 }
 
 @mixin desktop-styles(){
-
-	h1{
+    #header{
+        height:75px;
+    }
+    
+    h1{
         text-indent:0px;
+        margin-top:10px;
     }
 
     #gallery-container{

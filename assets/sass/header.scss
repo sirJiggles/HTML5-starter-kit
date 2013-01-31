@@ -13,7 +13,7 @@
     position:fixed;
     z-index:3;
     left:0;
-    height:42px;
+    height:48px;
 }
 
 .header-wrapper{
@@ -35,7 +35,7 @@ h1 {
     border:1px solid lighten($primary-color, 10%);
     @include rounded(5);
     color:white;
-    padding:5px;
+    padding:2px 5px 2px 5px;
     margin:5px 0 5px 0;
     text-decoration: none;
 }

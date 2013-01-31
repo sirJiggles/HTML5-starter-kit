@@ -212,7 +212,7 @@ meter {
   position: fixed;
   z-index: 3;
   left: 0;
-  height: 42px; }
+  height: 48px; }
 
 .header-wrapper {
   position: relative; }
@@ -232,7 +232,7 @@ h1 {
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: white;
-  padding: 5px;
+  padding: 2px 5px 2px 5px;
   margin: 5px 0 5px 0;
   text-decoration: none; }
 
@@ -719,7 +719,7 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     margin: 0; }
 
   #header {
-    height: 75px; }
+    height: 81px; }
 
   #main {
     padding: 95px 0 0 0; }
@@ -745,8 +745,12 @@ IPad 3                  | 2048      | 1536      | 264   | 2012      | iOS       
     width: 59%; } }
 /* DESKTOP UP (THESE ARE IE8 AND UP) */
 @media only screen and (min-width: 940px) {
+  #header {
+    height: 75px; }
+
   h1 {
-    text-indent: 0px; }
+    text-indent: 0px;
+    margin-top: 10px; }
 
   #gallery-container {
     width: 60%; }
