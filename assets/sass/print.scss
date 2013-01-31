@@ -1,4 +1,68 @@
-/* Print stylesheet */
-
+/*
+    Print stylesheet
+*/
 @import "_mixins.scss";
 @import "_global-vars.scss";
+@import "typography.scss";
+
+a{
+    text-decoration:underline;
+    margin-bottom:10px;
+    display:block;
+}
+
+img{
+    display:none;
+}
+
+ul{
+    margin:20px 0 20px 0;
+    padding:0 0 0 30px;
+}
+
+h1,h2,h3,h4{
+    width:100%;
+    display:block;
+    color:black;
+    margin:10px 0 10px 0;
+}
+
+body a:link:after, body a:visited:after {
+    content: " (" attr(href) ") ";
+}
+
+body{
+    color:black;
+}
+
+
+.center-content {
+  margin: 0 auto;
+  max-width: $site-width+px;
+  width: 90%;
+  padding: 0 5% 0 5%;
+}
+
+.col {
+  display: block;
+  float: left;
+  margin:0;
+}
+
+.row {
+  margin: 0 0 20px 0;
+  float: left;
+  width: 100%;
+}
+
+#header,
+#site-footer{
+    display:none;
+}
+
+/* 100% grid */
+@for $i from 1 through $cols {
+  .grid-#{$i} {
+    width: 100%;
+  }
+}

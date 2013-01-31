@@ -143,6 +143,7 @@ em {
 /* Form styles */
 /* CSS validation overrides */
 form fieldset {
+  display: block;
   float: left;
   width: 100%; }
 
@@ -150,8 +151,7 @@ form label {
   width: 100%;
   float: left;
   padding: 0 0 2% 0;
-  line-height: 1.8em;
-  font-family: 'Raleway', sans-serif; }
+  line-height: 1.8em; }
 
 form legend {
   margin: 0 0 10px 0;
@@ -160,8 +160,7 @@ form legend {
   width: 96%;
   background-color: #15a2ed;
   padding: 10px 2% 10px 2%;
-  color: white;
-  font-family: 'Raleway', sans-serif; }
+  color: white; }
 
 form input {
   width: 92%;
@@ -169,20 +168,23 @@ form input {
   margin: 0 0 2% 0; }
 
 form input[type='search'] {
-  width: 100%; }
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: inset 1px 1px 5px 0px #222222;
+  -webkit-box-shadow: inset 1px 1px 5px 0px #222222;
+  box-shadow: inset 1px 1px 5px 0px #222222; }
 
 form input[type='submit'] {
-  background-color: #15a2ed;
-  border: 1px solid #15a2ed;
-  width: auto;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px 15px 10px 15px;
-  float: right; }
-
-form input[type='submit']:hover,
-form input[type='submit']:active {
-  border: 1px solid #44b5f1; }
+  border: none;
+  overflow: visible;
+  font-weight: 400; }
 
 /* New input types */
 progress,
